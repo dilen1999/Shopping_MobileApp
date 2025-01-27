@@ -72,7 +72,8 @@ class LoginScreen extends Component {
         {/* Buttons */}
         <TouchableOpacity
           style={styles.loginButton}
-          onPress={() => alert("Login pressed")}
+          // onPress={() => alert("Login pressed")}
+          onPress={() => this.props.navigation.navigate("Main")}
         >
           <Text style={styles.loginButtonText}>Log in</Text>
         </TouchableOpacity>

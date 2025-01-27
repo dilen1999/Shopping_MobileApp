@@ -4,6 +4,9 @@ import { NavigationContainer } from "@react-navigation/native";
 import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
 import GetStarted from "./screens/GetStarted";
+import MainContainer from "./screens/Navigation/MainContainer";
+import ProductScreen from "./screens/Navigation/Screens/HomeScreen/ProductScreen";
+import Checkout from "./screens/Navigation/Screens/OrderScreen/Checkout";
 // import LoginScreen from "./screens/LoginScreen";
 // import SignupScreen from "./screens/SignupScreen";
 
@@ -19,6 +22,8 @@ export default function App() {
         <Stack.Screen name="GetStated" component={GetStarted} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Signup" component={SignupScreen} />
+        <Stack.Screen name="Main" component={MainContainer} />
+        <Stack.Screen name="Checkout" component={Checkout} />
       </Stack.Navigator>
     </NavigationContainer>
   );
