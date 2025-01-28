@@ -50,7 +50,7 @@ export class ProfileScreen extends Component {
 
           <TouchableOpacity
             style={[styles.menuContainer, styles.menuItem]}
-            onPress={() => this.handlePress("ShippingAddresses")}
+            onPress={() => this.props.navigation.navigate("ShippingAddress")}
           >
             <View style={styles.menuText}>
               <Text style={styles.menuTitle}>Shipping Addresses</Text>
@@ -139,7 +139,7 @@ const styles = StyleSheet.create({
     color: "#555",
   },
   menuContainer: {
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#fff",
     borderRadius: 10,
     padding: 10,
     shadowColor: "#000",

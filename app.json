@@ -1,4 +1,20 @@
 {
   "name": "shopping",
-  "slug": "shopping"
+  "slug": "shopping",
+  "extra": {
+    "eas": {
+      "projectId": "b81c34a1-d89f-4d5f-a586-8f964b7b2c9d"
+    }
+  },
+  "owner": "dilengeorge",
+  "expo": {
+    "android": {
+      "package": "com.dilengeorge.shopping"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b81c34a1-d89f-4d5f-a586-8f964b7b2c9d"
+      }
+    }
+  }
 }
