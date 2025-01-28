@@ -11,7 +11,7 @@ const ProductScreen = ({ route, navigation }) => {
 
   const handleAddToCart = () => {
     navigation.navigate("MyCart", {
-      cartItem: { ...product, quantity }, // Pass the product and quantity as a parameter
+      cartItem: { ...product, quantity },
     });
   };
 

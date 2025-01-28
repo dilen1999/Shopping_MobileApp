@@ -81,6 +81,15 @@ const MyCart = ({ navigation }) => {
         keyExtractor={(item) => item.id}
         renderItem={({ item, index }) => (
           <View style={styles.cartItem}>
+            <TouchableOpacity
+              style={styles.closeIconContainer}
+              onPress={() => {
+                // Add your remove logic here
+                console.log(`Remove item with ID: ${item.id}`);
+              }}
+            >
+              <Icon name="close-circle-outline" size={24} />
+            </TouchableOpacity>
             <Image source={{ uri: item.image }} style={styles.itemImage} />
             <View style={styles.itemDetails}>
               <Text style={styles.itemName}>{item.title}</Text>
@@ -161,9 +170,16 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     borderWidth: 1,
+    position: "relative",
     borderColor: "#ddd",
     borderRadius: 10,
     backgroundColor: "#f9f9f9",
+  },
+  closeIconContainer: {
+    position: "absolute",
+    top: 10,
+    right: 10,
+    zIndex: 1,
   },
   itemImage: {
     width: 80,

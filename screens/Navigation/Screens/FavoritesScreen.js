@@ -14,49 +14,49 @@ const favoritesData = [
     id: "1",
     title: "Coffee Table",
     price: 50.0,
-    image: "https://picsum.photos/80", // Replace with your image URL
+    image: "https://picsum.photos/80",
   },
   {
     id: "2",
     title: "Coffee Chair",
     price: 20.0,
-    image: "https://picsum.photos/80", // Replace with your image URL
+    image: "https://picsum.photos/80",
   },
   {
     id: "3",
     title: "Minimal Stand",
     price: 25.0,
-    image: "https://picsum.photos/80", // Replace with your image URL
+    image: "https://picsum.photos/80",
   },
   {
     id: "4",
     title: "Minimal Desk",
     price: 50.0,
-    image: "https://picsum.photos/80", // Replace with your image URL
+    image: "https://picsum.photos/80",
   },
   {
     id: "5",
     title: "Minimal Lamp",
     price: 12.0,
-    image: "https://picsum.photos/80", // Replace with your image URL
+    image: "https://picsum.photos/80",
   },
   {
     id: "6",
     title: "Minimal Stand",
     price: 25.0,
-    image: "https://picsum.photos/80", // Replace with your image URL
+    image: "https://picsum.photos/80",
   },
   {
     id: "7",
     title: "Minimal Desk",
     price: 50.0,
-    image: "https://picsum.photos/80", // Replace with your image URL
+    image: "https://picsum.photos/80",
   },
   {
     id: "8",
     title: "Minimal Lamp",
     price: 12.0,
-    image: "https://picsum.photos/80", // Replace with your image URL
+    image: "https://picsum.photos/80",
   },
 ];
 
@@ -69,7 +69,7 @@ const FavoritesScreen = () => {
         <Text style={styles.price}>${item.price.toFixed(2)}</Text>
       </View>
       <TouchableOpacity style={styles.deleteButton}>
-        <Icon name="close-circle-outline" size={24} color="#ff3333" />
+        <Icon name="close-circle-outline" size={24} />
       </TouchableOpacity>
       <TouchableOpacity style={styles.bagIconButton}>
         <Icon name="bag-outline" size={20} color="#000" />
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     elevation: 2,
-    position: "relative", // For absolute positioning of icons
+    position: "relative",
   },
   image: {
     width: 80,
@@ -139,14 +139,17 @@ const styles = StyleSheet.create({
   },
   details: {
     flex: 1,
+    alignItems: "flex-start",
+    textAlign: "top",
+    justifyContent: "flex-start",
   },
   title: {
     fontSize: 16,
-    fontWeight: "bold",
+    color: "#555",
   },
   price: {
-    fontSize: 14,
-    color: "#555",
+    fontSize: 16,
+    fontWeight: "bold",
   },
   deleteButton: {
     position: "absolute",
@@ -157,7 +160,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 5,
     right: 5,
-    backgroundColor: "#cacfd2", // Dark background for contrast
+    backgroundColor: "#cacfd2",
     borderRadius: 5,
     width: 25,
     height: 25,
