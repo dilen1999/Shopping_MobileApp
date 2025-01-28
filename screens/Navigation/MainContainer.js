@@ -2,7 +2,6 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from "react-native-vector-icons/Ionicons";
 import FavoritesScreen from "./Screens/FavoritesScreen";
-import ProfileScreen from "./Screens/ProfileScreen";
 import NotificationScreen from "./Screens/NotificationScreen";
 import HomeStackNavigator from "./HomeStackNavigator";
 import ProfileStackNavigator from "./ProfileStackNavigator";
@@ -29,7 +28,7 @@ const MainContainer = () => {
         },
         tabBarActiveTintColor: "black",
         tabBarInactiveTintColor: "gray",
-        tabBarStyle: { paddingBottom: 5, height: 60 },
+        tabBarLabel: () => null,
         headerShown: false,
       })}
     >
