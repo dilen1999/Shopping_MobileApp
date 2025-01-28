@@ -5,7 +5,6 @@ import LoginScreen from "./screens/LoginScreen";
 import SignupScreen from "./screens/SignupScreen";
 import GetStarted from "./screens/GetStarted";
 import MainContainer from "./screens/Navigation/MainContainer";
-import ProductScreen from "./screens/Navigation/Screens/HomeScreen/ProductScreen";
 import Checkout from "./screens/Navigation/Screens/OrderScreen/Checkout";
 import Success from "./screens/Navigation/Screens/OrderScreen/Success";
 // import LoginScreen from "./screens/LoginScreen";
@@ -17,7 +16,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="GetStated"
+        initialRouteName="Main"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="GetStated" component={GetStarted} />

@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
 export class ProfileScreen extends Component {
   render() {
@@ -14,11 +15,11 @@ export class ProfileScreen extends Component {
       <ScrollView style={styles.container}>
         <View style={styles.header}>
           <TouchableOpacity>
-            <Text style={styles.icon}>🔍</Text>
+            <Icon name="search" size={24} color="#333" />
           </TouchableOpacity>
           <Text style={styles.title}>Profile</Text>
           <TouchableOpacity>
-            <Text style={styles.icon}>🔄</Text>
+            <Icon name="log-out-outline" size={24} color="#333" />
           </TouchableOpacity>
         </View>
 
@@ -35,29 +36,65 @@ export class ProfileScreen extends Component {
         </View>
 
         {/* Profile Options */}
-        <View style={styles.menuContainer}>
-          {this.renderMenuItem("My orders", "Already have 10 orders")}
-          {this.renderMenuItem("Shipping Addresses", "03 Addresses")}
-          {this.renderMenuItem("Payment Method", "You have 2 cards")}
-          {this.renderMenuItem("My reviews", "Reviews for 5 items")}
-          {this.renderMenuItem(
-            "Setting",
-            "Notification, Password, FAQ, Contact"
-          )}
+        <View>
+          <TouchableOpacity
+            style={[styles.menuContainer, styles.menuItem]}
+            onPress={() => this.props.navigation.navigate("MyOrders")}
+          >
+            <View style={styles.menuText}>
+              <Text style={styles.menuTitle}>My orders</Text>
+              <Text style={styles.menuDescription}>Already have 10 orders</Text>
+            </View>
+            <Text style={styles.arrow}>›</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.menuContainer, styles.menuItem]}
+            onPress={() => this.handlePress("ShippingAddresses")}
+          >
+            <View style={styles.menuText}>
+              <Text style={styles.menuTitle}>Shipping Addresses</Text>
+              <Text style={styles.menuDescription}>03 Addresses</Text>
+            </View>
+            <Text style={styles.arrow}>›</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.menuContainer, styles.menuItem]}
+            onPress={() => this.handlePress("PaymentMethod")}
+          >
+            <View style={styles.menuText}>
+              <Text style={styles.menuTitle}>Payment Method</Text>
+              <Text style={styles.menuDescription}>You have 2 cards</Text>
+            </View>
+            <Text style={styles.arrow}>›</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.menuContainer, styles.menuItem]}
+            onPress={() => this.handlePress("MyReviews")}
+          >
+            <View style={styles.menuText}>
+              <Text style={styles.menuTitle}>My reviews</Text>
+              <Text style={styles.menuDescription}>Reviews for 5 items</Text>
+            </View>
+            <Text style={styles.arrow}>›</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.menuContainer, styles.menuItem]}
+            onPress={() => this.handlePress("Settings")}
+          >
+            <View style={styles.menuText}>
+              <Text style={styles.menuTitle}>Setting</Text>
+              <Text style={styles.menuDescription}>
+                Notification, Password, FAQ, Contact
+              </Text>
+            </View>
+            <Text style={styles.arrow}>›</Text>
+          </TouchableOpacity>
         </View>
       </ScrollView>
-    );
-  }
-
-  renderMenuItem(title, description) {
-    return (
-      <TouchableOpacity style={styles.menuItem}>
-        <View style={styles.menuText}>
-          <Text style={styles.menuTitle}>{title}</Text>
-          <Text style={styles.menuDescription}>{description}</Text>
-        </View>
-        <Text style={styles.arrow}>›</Text>
-      </TouchableOpacity>
     );
   }
 }
@@ -73,9 +110,6 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginBottom: 20,
-  },
-  icon: {
-    fontSize: 18,
   },
   title: {
     fontSize: 24,
@@ -112,6 +146,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.1,
     shadowRadius: 5,
     elevation: 2,
+    marginBottom: 20,
   },
   menuItem: {
     flexDirection: "row",
@@ -127,13 +162,15 @@ const styles = StyleSheet.create({
   menuTitle: {
     fontSize: 16,
     fontWeight: "bold",
+    marginBottom: 4,
   },
   menuDescription: {
     fontSize: 14,
     color: "#555",
+    marginBottom: 4,
   },
   arrow: {
-    fontSize: 18,
+    fontSize: 24,
     color: "#aaa",
   },
 });
