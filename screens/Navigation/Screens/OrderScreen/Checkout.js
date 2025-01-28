@@ -1,33 +1,40 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  TextInput,
-  Image,
-} from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
-const Checkout = () => {
+const Checkout = ({ navigation }) => {
   return (
     <View style={styles.container}>
       {/* Header Row */}
       <View style={styles.headerRow}>
         <TouchableOpacity
-          onPress={() => navigation.goBack()}
+          onPress={() => navigation.goBack()} // Back navigation
           style={styles.backButton}
         >
           <Icon name="chevron-back-outline" size={24} color="#333" />
         </TouchableOpacity>
-        <Text style={styles.title}>Check out</Text>
+        <Text style={styles.title}>Check out</Text> {/* Centered title */}
       </View>
 
       {/* Shipping Address */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Shipping Address</Text>
+        <View style={styles.sectionHeader}>
+          <Text style={styles.sectionTitle}>Shipping Address</Text>
+          <TouchableOpacity
+            onPress={() => console.log("Edit Shipping Address")}
+          >
+            <Icon
+              name="pencil"
+              size={20}
+              color="#666"
+              style={styles.editIcon}
+            />
+          </TouchableOpacity>
+        </View>
         <View style={styles.sectionContent}>
           <Text style={styles.boldText}>Bruno Fernandes</Text>
+          {/* Divider */}
+          <View style={styles.divider} />
           <Text style={styles.lightText}>
             25 rue Robert Latouche, Nice, 06200, Côte D'azur, France
           </Text>
@@ -36,10 +43,22 @@ const Checkout = () => {
 
       {/* Payment */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Payment</Text>
+        <View style={styles.sectionHeader}>
+          <Text style={styles.sectionTitle}>Payment</Text>
+          <TouchableOpacity
+            onPress={() => console.log("Edit Shipping Address")}
+          >
+            <Icon
+              name="pencil"
+              size={20}
+              color="#666"
+              style={styles.editIcon}
+            />
+          </TouchableOpacity>
+        </View>
         <View style={styles.sectionContent}>
           <Image
-            source={{ uri: "../assets/mastercard.png/40x25" }} // Replace with a MasterCard logo image URL
+            // source={require("../assets/loginheader.png")}
             style={styles.paymentLogo}
           />
           <Text style={styles.lightText}>**** **** **** 3947</Text>
@@ -48,7 +67,19 @@ const Checkout = () => {
 
       {/* Delivery Method */}
       <View style={styles.section}>
-        <Text style={styles.sectionTitle}>Delivery method</Text>
+        <View style={styles.sectionHeader}>
+          <Text style={styles.sectionTitle}>Delivery method</Text>
+          <TouchableOpacity
+            onPress={() => console.log("Edit Shipping Address")}
+          >
+            <Icon
+              name="pencil"
+              size={20}
+              color="#666"
+              style={styles.editIcon}
+            />
+          </TouchableOpacity>
+        </View>
         <View style={styles.sectionContent}>
           <Image
             source={{ uri: "https://via.placeholder.com/50x30" }} // Replace with DHL logo image URL
@@ -75,7 +106,10 @@ const Checkout = () => {
       </View>
 
       {/* Submit Order Button */}
-      <TouchableOpacity style={styles.submitButton}>
+      <TouchableOpacity
+        style={styles.submitButton}
+        onPress={() => navigation.navigate("Success")}
+      >
         <Text style={styles.submitText}>SUBMIT ORDER</Text>
       </TouchableOpacity>
     </View>
@@ -87,15 +121,30 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    justifyContent: "center",
-    alignItems: "center",
-    textAlign: "center",
+    textAlign: "center", // Ensure title is centered
+    flex: 1, // Allow title to take available space for centering
   },
   section: { marginBottom: 20 },
-  sectionTitle: { fontSize: 16, fontWeight: "bold", marginBottom: 10 },
-  sectionContent: {
+  sectionTitle: { fontSize: 16, fontWeight: "semi-bold", marginBottom: 10 },
+  divider: {
+    height: 1,
+    backgroundColor: "#ccc",
+    marginVertical: 10, // Space around the divider
+    alignSelf: "stretch", // Ensures it spans the full width of the container
+  },
+  sectionHeader: {
     flexDirection: "row",
+    justifyContent: "space-between",
     alignItems: "center",
+    marginBottom: 10,
+  },
+  editIcon: {
+    marginLeft: 10,
+  },
+
+  sectionContent: {
+    flexDirection: "colomn",
+    alignItems: "left",
     justifyContent: "space-between",
     padding: 15,
     backgroundColor: "#f9f9f9",

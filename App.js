@@ -7,6 +7,7 @@ import GetStarted from "./screens/GetStarted";
 import MainContainer from "./screens/Navigation/MainContainer";
 import ProductScreen from "./screens/Navigation/Screens/HomeScreen/ProductScreen";
 import Checkout from "./screens/Navigation/Screens/OrderScreen/Checkout";
+import Success from "./screens/Navigation/Screens/OrderScreen/Success";
 // import LoginScreen from "./screens/LoginScreen";
 // import SignupScreen from "./screens/SignupScreen";
 
@@ -24,6 +25,7 @@ export default function App() {
         <Stack.Screen name="Signup" component={SignupScreen} />
         <Stack.Screen name="Main" component={MainContainer} />
         <Stack.Screen name="Checkout" component={Checkout} />
+        <Stack.Screen name="Success" component={Success} />
       </Stack.Navigator>
     </NavigationContainer>
   );

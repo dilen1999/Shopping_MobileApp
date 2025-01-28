@@ -176,11 +176,11 @@ const styles = StyleSheet.create({
   },
   itemName: {
     fontSize: 18,
-    fontWeight: "bold",
   },
   itemPrice: {
     fontSize: 16,
-    color: "#666",
+    color: "black",
+    fontWeight: "bold",
   },
   counter: {
     flexDirection: "row",
