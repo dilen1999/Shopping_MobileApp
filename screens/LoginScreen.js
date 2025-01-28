@@ -7,12 +7,13 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
 class LoginScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      passwordVisible: false, // State to toggle password visibility
+      passwordVisible: false,
     };
   }
 
@@ -54,14 +55,17 @@ class LoginScreen extends Component {
             <TextInput
               placeholder="123A@$#%	"
               style={styles.input}
-              // secureTextEntry={true}
               secureTextEntry={!passwordVisible}
             />
             <TouchableOpacity
               style={styles.eyeIcon}
-              onPress={this.togglePasswordVisibility} // Toggle password visibility on press
+              onPress={this.togglePasswordVisibility}
             >
-              <Text>{passwordVisible ? "🙈" : "👁️"}</Text>
+              <Icon
+                name={passwordVisible ? "eye" : "eye-off"}
+                size={20}
+                color="#333"
+              />
             </TouchableOpacity>
           </View>
           <TouchableOpacity>
@@ -72,7 +76,6 @@ class LoginScreen extends Component {
         {/* Buttons */}
         <TouchableOpacity
           style={styles.loginButton}
-          // onPress={() => alert("Login pressed")}
           onPress={() => this.props.navigation.navigate("Main")}
         >
           <Text style={styles.loginButtonText}>Log in</Text>
@@ -140,8 +143,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#333",
     paddingHorizontal: 10,
-    textAlignVertical: "center", // Center the text vertically to prevent yellow border
-    outlineStyle: "none", // Disable focus outline for web compatibility
+    textAlignVertical: "center",
+    outlineStyle: "none",
   },
 
   passwordContainer: {
@@ -153,9 +156,9 @@ const styles = StyleSheet.create({
     top: 15,
   },
   forgotPassword: {
-    textAlign: "right",
-    color: "#666",
+    textAlign: "center",
     marginBottom: 20,
+    fontWeight: "bold",
   },
   loginButton: {
     backgroundColor: "#333",
