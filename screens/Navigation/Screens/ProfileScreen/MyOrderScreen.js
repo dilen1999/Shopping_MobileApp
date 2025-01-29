@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import {
   View,
@@ -7,6 +8,7 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -39,7 +41,6 @@ const orders = [
 
 const OrderList = ({ status }) => (
   <View style={{ flex: 1 }}>
-    {/* Order List */}
     <FlatList
       data={orders.filter((order) => order.status === status)}
       keyExtractor={(item) => item.id}
@@ -72,11 +73,24 @@ const OrderList = ({ status }) => (
 );
 
 export default function MyOrderScreen() {
+  const navigation = useNavigation();
+
   return (
-    <View>
+    <View style={{ flex: 1 }}>
+      {/* Header Section */}
       <View style={styles.header}>
-        <Text style={styles.headerText}>My Orders</Text>
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={styles.backButton}
+        >
+          <Icon name="chevron-back-outline" size={24} color="#333" />
+        </TouchableOpacity>
+        <View style={styles.headerTitleContainer}>
+          <Text style={styles.headerText}>My Orders</Text>
+        </View>
       </View>
+
+      {/* Tab Navigator */}
       <Tab.Navigator>
         <Tab.Screen name="Delivered">
           {() => <OrderList status="Delivered" />}
@@ -104,23 +118,38 @@ const styles = StyleSheet.create({
     elevation: 2,
   },
   header: {
+    flexDirection: "row",
+    alignItems: "center",
     backgroundColor: "#fff",
     paddingVertical: 15,
     paddingHorizontal: 20,
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",
+  },
+  backButton: {
+    position: "absolute",
+    left: 20,
+    zIndex: 1,
+  },
+  headerTitleContainer: {
+    flex: 1,
     alignItems: "center",
+  },
+  headerText: {
+    fontSize: 20,
+    fontWeight: "bold",
+  },
+  headerText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    alignItems: "center",
+    justifyContent: "center",
   },
   orderHeaderWrapper: {
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",
     paddingBottom: 10,
     marginBottom: 10,
-  },
-
-  headerText: {
-    fontSize: 20,
-    fontWeight: "bold",
   },
   orderHeader: {
     flexDirection: "row",
