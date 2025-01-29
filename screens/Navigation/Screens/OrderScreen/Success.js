@@ -1,14 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
+import success from "../../../../assets/success.png";
 
 const Success = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>SUCCESS!</Text>
-      <Image
-        source={require("../../../../assets/success.png")}
-        style={styles.deliveryLogo}
-      />
+      <Image source={success} style={styles.deliveryLogo} />
       <Text style={styles.message}>
         Your order will be delivered soon. Thank you for choosing our app!
       </Text>

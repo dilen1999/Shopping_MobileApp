@@ -7,8 +7,11 @@ import {
   TouchableOpacity,
   ScrollView,
 } from "react-native";
+// import { Asset } from "expo-asset";
+import profileImage from "../../../assets/profile.png";
 import Icon from "react-native-vector-icons/Ionicons";
 
+// const profileImage = Asset.fromModule(require("../../assets/profile.png")).uri;
 export class ProfileScreen extends Component {
   render() {
     return (
@@ -25,10 +28,11 @@ export class ProfileScreen extends Component {
 
         {/* Profile Information */}
         <View style={styles.profileContainer}>
-          <Image
+          {/* <Image
             source={require("../../../assets/profile.png")}
             style={styles.profileImage}
-          />
+          /> */}
+          <Image source={profileImage} style={styles.profileImage} />;
           <View style={styles.profileText}>
             <Text style={styles.profileName}>Bruno Pham</Text>
             <Text style={styles.profileEmail}>bruno203@gmail.com</Text>

@@ -1,6 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
+import masterCard from "../../../../assets/mastercard.png";
+import dHl from "../../../../assets/DHL.png";
 
 const Checkout = ({ navigation }) => {
   return (
@@ -57,10 +59,7 @@ const Checkout = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={styles.sectionContent}>
-          <Image
-            source={require("../../../../assets/mastercard.png")}
-            style={styles.paymentLogo}
-          />
+          <Image source={masterCard} style={styles.paymentLogo} />
           <Text style={styles.lightText}>**** **** **** 3947</Text>
         </View>
       </View>
@@ -81,10 +80,7 @@ const Checkout = ({ navigation }) => {
           </TouchableOpacity>
         </View>
         <View style={styles.sectionContent}>
-          <Image
-            source={require("../../../../assets/DHL.png")}
-            style={styles.deliveryLogo}
-          />
+          <Image source={dHl} style={styles.deliveryLogo} />
           <Text style={styles.lightText}>Fast (2-3 days)</Text>
         </View>
       </View>
