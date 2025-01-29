@@ -45,9 +45,11 @@ const OrderList = ({ status }) => (
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => (
         <View style={styles.card}>
-          <View style={styles.orderHeader}>
-            <Text style={styles.orderNo}>Order No {item.orderNo}</Text>
-            <Text style={styles.date}>{item.date}</Text>
+          <View style={styles.orderHeaderWrapper}>
+            <View style={styles.orderHeader}>
+              <Text style={styles.orderNo}>Order No {item.orderNo}</Text>
+              <Text style={styles.date}>{item.date}</Text>
+            </View>
           </View>
           <View style={styles.orderDetails}>
             <Text>
@@ -108,6 +110,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: "#ddd",
     alignItems: "center",
+  },
+  orderHeaderWrapper: {
+    borderBottomWidth: 1,
+    borderBottomColor: "#ddd",
+    paddingBottom: 10,
+    marginBottom: 10,
   },
 
   headerText: {

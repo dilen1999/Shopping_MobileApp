@@ -8,12 +8,12 @@ const Checkout = ({ navigation }) => {
       {/* Header Row */}
       <View style={styles.headerRow}>
         <TouchableOpacity
-          onPress={() => navigation.goBack()} // Back navigation
+          onPress={() => navigation.goBack()}
           style={styles.backButton}
         >
           <Icon name="chevron-back-outline" size={24} color="#333" />
         </TouchableOpacity>
-        <Text style={styles.title}>Check out</Text> {/* Centered title */}
+        <Text style={styles.title}>Check out</Text>
       </View>
 
       {/* Shipping Address */}
@@ -82,7 +82,7 @@ const Checkout = ({ navigation }) => {
         </View>
         <View style={styles.sectionContent}>
           <Image
-            source={{ uri: "https://via.placeholder.com/50x30" }} // Replace with DHL logo image URL
+            source={{ uri: "https://via.placeholder.com/50x30" }}
             style={styles.deliveryLogo}
           />
           <Text style={styles.lightText}>Fast (2-3 days)</Text>
@@ -121,16 +121,16 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
-    textAlign: "center", // Ensure title is centered
-    flex: 1, // Allow title to take available space for centering
+    textAlign: "center",
+    flex: 1,
   },
   section: { marginBottom: 20 },
   sectionTitle: { fontSize: 16, fontWeight: "semi-bold", marginBottom: 10 },
   divider: {
     height: 1,
     backgroundColor: "#ccc",
-    marginVertical: 10, // Space around the divider
-    alignSelf: "stretch", // Ensures it spans the full width of the container
+    marginVertical: 10,
+    alignSelf: "stretch",
   },
   sectionHeader: {
     flexDirection: "row",
@@ -141,14 +141,15 @@ const styles = StyleSheet.create({
   editIcon: {
     marginLeft: 10,
   },
-
   sectionContent: {
-    flexDirection: "colomn",
-    alignItems: "left",
-    justifyContent: "space-between",
     padding: 15,
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#fff",
     borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
   },
   headerRow: {
     flexDirection: "row",
@@ -164,10 +165,16 @@ const styles = StyleSheet.create({
   deliveryLogo: { width: 50, height: 30, marginRight: 10 },
   summary: {
     padding: 15,
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#fff",
     borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
     marginBottom: 20,
   },
+
   summaryRow: {
     flexDirection: "row",
     justifyContent: "space-between",

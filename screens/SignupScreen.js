@@ -7,9 +7,30 @@ import {
   TouchableOpacity,
   Image,
 } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
 class SignupScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      passwordVisible: false,
+      confirmPasswordVisible: false,
+    };
+  }
+
+  togglePasswordVisibility = () => {
+    this.setState((prevState) => ({
+      passwordVisible: !prevState.passwordVisible,
+    }));
+  };
+
+  toggleConfirmPasswordVisibility = () => {
+    this.setState((prevState) => ({
+      confirmPasswordVisible: !prevState.confirmPasswordVisible,
+    }));
+  };
   render() {
+    const { passwordVisible, confirmPasswordVisible } = this.state;
     return (
       <View style={styles.container}>
         {/* Logo */}
@@ -38,10 +59,17 @@ class SignupScreen extends Component {
             <TextInput
               placeholder=""
               style={styles.input}
-              secureTextEntry={true}
+              secureTextEntry={!passwordVisible}
             />
-            <TouchableOpacity style={styles.eyeIcon}>
-              <Text>👁️</Text> {/* Replace with an icon if needed */}
+            <TouchableOpacity
+              style={styles.eyeIcon}
+              onPress={this.togglePasswordVisibility}
+            >
+              <Icon
+                name={passwordVisible ? "eye" : "eye-off"}
+                size={20}
+                color="#333"
+              />
             </TouchableOpacity>
           </View>
           <Text style={styles.label}>Confirm Password</Text>
@@ -49,10 +77,17 @@ class SignupScreen extends Component {
             <TextInput
               placeholder=""
               style={styles.input}
-              secureTextEntry={true}
+              secureTextEntry={!passwordVisible}
             />
-            <TouchableOpacity style={styles.eyeIcon}>
-              <Text>👁️</Text> {/* Replace with an icon if needed */}
+            <TouchableOpacity
+              style={styles.eyeIcon}
+              onPress={this.togglePasswordVisibility}
+            >
+              <Icon
+                name={passwordVisible ? "eye" : "eye-off"}
+                size={20}
+                color="#333"
+              />
             </TouchableOpacity>
           </View>
         </View>
@@ -60,7 +95,7 @@ class SignupScreen extends Component {
         {/* Signup Button */}
         <TouchableOpacity
           style={styles.signupButton}
-          onPress={() => alert("Signup pressed")}
+          onPress={() => this.props.navigation.navigate("Main")}
         >
           <Text style={styles.signupButtonText}>SIGN UP</Text>
         </TouchableOpacity>
@@ -118,8 +153,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#333",
     paddingHorizontal: 10,
-    textAlignVertical: "center", // Center the text vertically to prevent yellow border
-    outlineStyle: "none", // Disable focus outline for web compatibility
+    textAlignVertical: "center",
+    outlineStyle: "none",
   },
   passwordContainer: {
     position: "relative",
@@ -127,7 +162,7 @@ const styles = StyleSheet.create({
   eyeIcon: {
     position: "absolute",
     right: 15,
-    top: 15,
+    top: 5,
   },
   label: {
     fontSize: 16,

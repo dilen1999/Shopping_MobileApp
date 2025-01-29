@@ -61,31 +61,25 @@ const products = [
 const HomeScreen = ({ navigation }) => {
   const renderCategoryItem = ({ item, index }) => (
     <TouchableOpacity
-      style={[
-        styles.categoryItem,
-        index === 0 && styles.activeCategoryItem, // Highlight active item
-      ]}
+      style={[styles.categoryItem, index === 0 && styles.activeCategoryItem]}
     >
       <View
         style={[
           styles.categoryIconContainer,
-          index === 0 && styles.activeCategoryIconContainer, // Highlight active icon background
+          index === 0 && styles.activeCategoryIconContainer,
         ]}
       >
         <Text
           style={[
             styles.categoryIcon,
-            index === 0 && styles.activeCategoryIcon, // Highlight active icon
+            index === 0 && styles.activeCategoryIcon,
           ]}
         >
           {item.icon}
         </Text>
       </View>
       <Text
-        style={[
-          styles.categoryText,
-          index === 0 && styles.activeCategoryText, // Highlight active text
-        ]}
+        style={[styles.categoryText, index === 0 && styles.activeCategoryText]}
       >
         {item.name}
       </Text>
@@ -95,7 +89,7 @@ const HomeScreen = ({ navigation }) => {
   const renderProductItem = ({ item }) => (
     <TouchableOpacity
       style={styles.productCard}
-      onPress={() => navigation.navigate("Product", { product: item })} // Pass product details
+      onPress={() => navigation.navigate("Product", { product: item })}
     >
       <View style={styles.imageContainer}>
         <Image source={{ uri: item.image }} style={styles.productImage} />
@@ -228,7 +222,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 20,
     right: 10,
-    backgroundColor: "#8c8d8d", // Dark background for contrast
+    backgroundColor: "#8c8d8d",
     borderRadius: 5,
     width: 30,
     height: 30,
