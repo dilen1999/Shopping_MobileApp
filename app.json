@@ -7,11 +7,11 @@
     },
     "extra": {
       "eas": {
-        "projectId": "72947678-3f7b-419e-974d-59f4615badcd"
+        "projectId": "b81c34a1-d89f-4d5f-a586-8f964b7b2c9d"
       }
     },
     "android": {
-      "package": "com.sivakkanthk.shopping"
+      "package": "com.dilengeorge.shopping"
     }
   }
 }
