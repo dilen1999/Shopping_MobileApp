@@ -1,20 +1,17 @@
 {
-  "name": "shopping",
-  "slug": "shopping",
-  "extra": {
-    "eas": {
-      "projectId": "b81c34a1-d89f-4d5f-a586-8f964b7b2c9d"
-    }
-  },
-  "owner": "dilengeorge",
   "expo": {
-    "android": {
-      "package": "com.dilengeorge.shopping"
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splashscreen_logo.png",
+      "backgroundColor": "#ffffff"
     },
     "extra": {
       "eas": {
-        "projectId": "b81c34a1-d89f-4d5f-a586-8f964b7b2c9d"
+        "projectId": "72947678-3f7b-419e-974d-59f4615badcd"
       }
+    },
+    "android": {
+      "package": "com.sivakkanthk.shopping"
     }
   }
 }
