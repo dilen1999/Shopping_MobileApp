@@ -208,15 +208,17 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     elevation: 3,
     alignItems: "flex-start",
+    overflow: "hidden",
   },
   imageContainer: {
     position: "relative",
+    width: "100%",
+    height: 200,
   },
   productImage: {
-    width: 150,
-    height: 200,
+    width: "100%",
+    height: "100%",
     borderRadius: 10,
-    marginBottom: 10,
   },
   bagIconContainer: {
     position: "absolute",
@@ -235,14 +237,16 @@ const styles = StyleSheet.create({
     color: "#333",
     marginBottom: 5,
     textAlign: "left",
-    alignContent: "left",
+    paddingHorizontal: 5,
+    paddingBottom: 5,
   },
   productPrice: {
     fontSize: 12,
     fontWeight: "bold",
     color: "black",
     textAlign: "left",
-    alignItems: "left",
+    paddingHorizontal: 5,
+    paddingBottom: 10,
   },
 });
 

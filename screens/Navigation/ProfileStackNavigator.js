@@ -3,6 +3,7 @@ import React from "react";
 import ProfileScreen from "./Screens/ProfileScreen";
 import MyOrderScreen from "./Screens/ProfileScreen/MyOrderScreen";
 import ShippingAddressScreen from "./Screens/ProfileScreen/ShippingAddressScreen";
+import PaymentMethodScreen from "./Screens/ProfileScreen/PaymentMethodScreen";
 
 const ProfileStack = createNativeStackNavigator();
 
@@ -14,6 +15,10 @@ const ProfileStackNavigator = () => {
       <ProfileStack.Screen
         name="ShippingAddress"
         component={ShippingAddressScreen}
+      />
+      <ProfileStack.Screen
+        name="PaymentMethod"
+        component={PaymentMethodScreen}
       />
     </ProfileStack.Navigator>
   );

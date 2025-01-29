@@ -31,7 +31,7 @@ const Checkout = ({ navigation }) => {
             />
           </TouchableOpacity>
         </View>
-        <View style={styles.sectionContent}>
+        <View style={styles.sectionContentTop}>
           <Text style={styles.boldText}>Bruno Fernandes</Text>
           {/* Divider */}
           <View style={styles.divider} />
@@ -58,7 +58,7 @@ const Checkout = ({ navigation }) => {
         </View>
         <View style={styles.sectionContent}>
           <Image
-            // source={require("../assets/loginheader.png")}
+            source={require("../../../../assets/mastercard.png")}
             style={styles.paymentLogo}
           />
           <Text style={styles.lightText}>**** **** **** 3947</Text>
@@ -82,7 +82,7 @@ const Checkout = ({ navigation }) => {
         </View>
         <View style={styles.sectionContent}>
           <Image
-            source={{ uri: "https://via.placeholder.com/50x30" }}
+            source={require("../../../../assets/DHL.png")}
             style={styles.deliveryLogo}
           />
           <Text style={styles.lightText}>Fast (2-3 days)</Text>
@@ -142,6 +142,17 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   sectionContent: {
+    padding: 15,
+    backgroundColor: "#fff",
+    flexDirection: "row",
+    borderRadius: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    elevation: 5,
+  },
+  sectionContentTop: {
     padding: 15,
     backgroundColor: "#fff",
     borderRadius: 10,

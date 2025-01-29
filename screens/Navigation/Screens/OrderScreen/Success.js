@@ -6,8 +6,8 @@ const Success = ({ navigation }) => {
     <View style={styles.container}>
       <Text style={styles.title}>SUCCESS!</Text>
       <Image
-        // source={require("../assets/success-illustration.png")} // Replace with your success illustration image
-        style={styles.image}
+        source={require("../../../../assets/success.png")}
+        style={styles.deliveryLogo}
       />
       <Text style={styles.message}>
         Your order will be delivered soon. Thank you for choosing our app!

@@ -26,7 +26,7 @@ export class ProfileScreen extends Component {
         {/* Profile Information */}
         <View style={styles.profileContainer}>
           <Image
-            // source={require("../../assets/profile.png")}
+            source={require("../../../assets/profile.png")}
             style={styles.profileImage}
           />
           <View style={styles.profileText}>
@@ -61,7 +61,7 @@ export class ProfileScreen extends Component {
 
           <TouchableOpacity
             style={[styles.menuContainer, styles.menuItem]}
-            onPress={() => this.handlePress("PaymentMethod")}
+            onPress={() => this.props.navigation.navigate("PaymentMethod")}
           >
             <View style={styles.menuText}>
               <Text style={styles.menuTitle}>Payment Method</Text>

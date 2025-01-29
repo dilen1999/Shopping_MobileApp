@@ -39,7 +39,10 @@ export default function ShippingAddressScreen({ navigation }) {
         <TouchableOpacity onPress={() => navigation.goBack()}>
           <Icon name="chevron-back-outline" size={24} color="#333" />
         </TouchableOpacity>
-        <Text style={styles.headerText}>Shipping Address</Text>
+
+        <View style={styles.headerTitleContainer}>
+          <Text style={styles.headerText}>Shipping Address</Text>
+        </View>
       </View>
 
       {/* Address List */}
@@ -102,13 +105,21 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 20,
+    justifyContent: "space-between",
+    position: "relative",
+    paddingVertical: 10,
+  },
+  headerTitleContainer: {
+    position: "absolute",
+    left: "50%",
+    transform: [{ translateX: -75 }], // Adjust based on text width
   },
   headerText: {
     fontSize: 20,
     fontWeight: "bold",
-    marginLeft: 10,
+    textAlign: "center",
   },
+
   checkboxTop: {
     flexDirection: "row",
     marginBottom: 10,
