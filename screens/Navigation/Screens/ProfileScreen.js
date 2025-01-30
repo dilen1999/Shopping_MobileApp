@@ -76,7 +76,7 @@ export class ProfileScreen extends Component {
 
           <TouchableOpacity
             style={[styles.menuContainer, styles.menuItem]}
-            onPress={() => this.handlePress("MyReviews")}
+            onPress={() => this.props.navigation.navigate("MyReview")}
           >
             <View style={styles.menuText}>
               <Text style={styles.menuTitle}>My reviews</Text>

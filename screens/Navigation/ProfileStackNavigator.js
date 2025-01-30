@@ -4,6 +4,8 @@ import ProfileScreen from "./Screens/ProfileScreen";
 import MyOrderScreen from "./Screens/ProfileScreen/MyOrderScreen";
 import ShippingAddressScreen from "./Screens/ProfileScreen/ShippingAddressScreen";
 import PaymentMethodScreen from "./Screens/ProfileScreen/PaymentMethodScreen";
+import MyReviewsScreen from "./Screens/ProfileScreen/MyReviewsScreen";
+import AddAddressScreen from "./Screens/ProfileScreen/AddAddressScreen";
 
 const ProfileStack = createNativeStackNavigator();
 
@@ -20,6 +22,8 @@ const ProfileStackNavigator = () => {
         name="PaymentMethod"
         component={PaymentMethodScreen}
       />
+      <ProfileStack.Screen name="MyReview" component={MyReviewsScreen} />
+      <ProfileStack.Screen name="AddAddress" component={AddAddressScreen} />
     </ProfileStack.Navigator>
   );
 };
