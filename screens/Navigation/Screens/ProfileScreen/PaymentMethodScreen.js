@@ -104,7 +104,10 @@ export default function PaymentMethodScreen({ navigation }) {
       />
 
       {/* Add Card Button */}
-      <TouchableOpacity style={styles.addButton}>
+      <TouchableOpacity
+        style={styles.addButton}
+        onPress={() => navigation.navigate("AddPayment")}
+      >
         <Icon name="add" size={30} color="#000" />
       </TouchableOpacity>
     </View>
