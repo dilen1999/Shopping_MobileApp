@@ -121,7 +121,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   section: { marginBottom: 20 },
-  sectionTitle: { fontSize: 16, fontWeight: "semi-bold", marginBottom: 10 },
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: "semi-bold",
+    marginBottom: 10,
+    color: "#ccc",
+  },
   divider: {
     height: 1,
     backgroundColor: "#ccc",

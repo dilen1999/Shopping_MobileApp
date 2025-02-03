@@ -1,12 +1,6 @@
 import React, { Component } from "react";
-import {
-  Text,
-  View,
-  FlatList,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-} from "react-native";
+import { Text, View, FlatList, Image, StyleSheet } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
 const notificationsData = [
   {
@@ -94,7 +88,18 @@ export class NotificationScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.header}>Notification</Text>
+        <View style={styles.headerContainer}>
+          <Icon
+            name="search-outline"
+            size={24}
+            color="#000"
+            style={styles.searchIcon}
+          />
+          <View style={styles.headerWrapper}>
+            <Text style={styles.header}>Notification</Text>
+          </View>
+        </View>
+
         <FlatList
           data={notificationsData}
           renderItem={this.renderNotification}
@@ -118,6 +123,19 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     textAlign: "center",
   },
+  headerContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 16,
+  },
+  headerWrapper: {
+    flex: 1,
+    alignItems: "center",
+  },
+  searchIcon: {
+    marginRight: 10,
+  },
+
   listContainer: {
     paddingBottom: 16,
   },

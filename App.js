@@ -16,7 +16,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Main"
+        initialRouteName="GetStated"
         screenOptions={{ headerShown: false }}
       >
         <Stack.Screen name="GetStated" component={GetStarted} />

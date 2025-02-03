@@ -14,7 +14,7 @@ class GetStarted extends Component {
   render() {
     return (
       <ImageBackground
-        source={require("../assets/lamp.jpg")}
+        source={require("../assets/getStart.png")}
         style={styles.background}
         resizeMode="cover"
       >
