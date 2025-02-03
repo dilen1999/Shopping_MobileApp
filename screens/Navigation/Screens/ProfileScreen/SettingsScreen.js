@@ -18,22 +18,51 @@ export default function SettingsScreen({ navigation }) {
     <View style={styles.container}>
       {/* Header */}
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => navigation.goBack()}>
-          <Icon name="chevron-back-outline" size={24} color="#333" />
-        </TouchableOpacity>
-        <Text style={styles.headerText}>Setting</Text>
+        <View style={styles.iconWrapper}>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <Icon name="chevron-back-outline" size={24} color="#333" />
+          </TouchableOpacity>
+        </View>
+        <Text style={styles.headerText}>Settings</Text>
+        <View style={styles.iconWrapper} />{" "}
+        {/* Empty View for center alignment */}
       </View>
 
       {/* Personal Information */}
-      <Text style={styles.sectionTitle}>Personal Information</Text>
-      <View style={styles.inputContainer}>
-        <TextInput style={styles.input} value="Bruno Pham" editable={false} />
+      <View style={styles.rowContainer}>
+        <Text style={styles.sectionTitle}>Personal Information</Text>
         <TouchableOpacity>
           <Icon name="pencil-outline" size={18} color="#666" />
         </TouchableOpacity>
       </View>
+      {/* <View style={styles.inputContainer}>
+        <View>
+          <Text style={styles.inputText}>Name</Text>
+        </View>
+        <View>
+          <TextInput style={styles.input} value="Bruno Pham" editable={false} />
+        </View>
+      </View>
 
       <View style={styles.inputContainer}>
+        <View>
+          <Text style={styles.inputText}>Email</Text>
+        </View>
+        <View>
+          <TextInput
+            style={styles.input}
+            value="bruno203@gmail.com"
+            editable={false}
+          />
+        </View>
+      </View> */}
+      <View style={styles.inputContainer}>
+        <Text style={styles.inputText}>Name</Text>
+        <TextInput style={styles.input} value="Bruno Pham" editable={false} />
+      </View>
+
+      <View style={styles.inputContainer}>
+        <Text style={styles.inputText}>Email</Text>
         <TextInput
           style={styles.input}
           value="bruno203@gmail.com"
@@ -42,12 +71,15 @@ export default function SettingsScreen({ navigation }) {
       </View>
 
       {/* Password Section */}
-      <Text style={styles.sectionTitle}>Password</Text>
-      <View style={styles.inputContainer}>
-        <TextInput style={styles.input} value="************" editable={false} />
+      <View style={styles.rowContainer}>
+        <Text style={styles.sectionTitle}>Password</Text>
         <TouchableOpacity>
           <Icon name="pencil-outline" size={18} color="#666" />
         </TouchableOpacity>
+      </View>
+      <View style={styles.inputContainer}>
+        <Text style={styles.inputText}>Name</Text>
+        <TextInput style={styles.input} value="************" editable={false} />
       </View>
 
       {/* Notifications Section */}
@@ -76,7 +108,6 @@ export default function SettingsScreen({ navigation }) {
     </View>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -86,33 +117,48 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between",
     marginBottom: 20,
+  },
+  iconWrapper: {
+    width: 30, // Ensures the icon and empty space for alignment
+    alignItems: "center",
   },
   headerText: {
     fontSize: 20,
     fontWeight: "bold",
-    marginLeft: 20,
+    textAlign: "center",
+    flex: 1, // Makes sure the text is centered
   },
-  sectionTitle: {
-    fontSize: 16,
-    fontWeight: "bold",
-    marginTop: 20,
-    marginBottom: 10,
-  },
-  inputContainer: {
+  rowContainer: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
+    marginBottom: 10,
+  },
+
+  // FIXED inputContainer to stack elements in a column
+  inputContainer: {
+    width: "100%",
     backgroundColor: "#f5f5f5",
     padding: 10,
     borderRadius: 8,
     marginBottom: 10,
+    flexDirection: "column", // Ensure label and input stack vertically
+  },
+
+  inputText: {
+    color: "#999",
+    marginBottom: 5, // Reduce space
   },
   input: {
-    flex: 1,
-    fontSize: 14,
-    color: "#333",
+    backgroundColor: "#f5f5f5",
+    borderRadius: 8,
+    fontSize: 16,
+    padding: 10,
+    borderWidth: 0, // Remove any borders
   },
+
   notificationContainer: {
     flexDirection: "row",
     justifyContent: "space-between",

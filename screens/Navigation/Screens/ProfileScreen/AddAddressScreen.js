@@ -75,7 +75,7 @@ export default function AddAddressScreen({ navigation }) {
       {/* Country Picker */}
       <View style={styles.inputContainer}>
         <Text style={styles.inputText}>Country</Text>
-        <View style={styles.pickerContainer}>
+        <View style={styles.pickerWrapper}>
           <RNPickerSelect
             onValueChange={(value) => setCountry(value)}
             items={[
@@ -85,20 +85,12 @@ export default function AddAddressScreen({ navigation }) {
             ]}
             placeholder={{ label: "Select Country", value: null }}
             style={{
-              inputIOS: styles.pickerInput,
-              inputAndroid: styles.pickerInput,
+              inputIOS: styles.pickerInput, // ✅ Apply grey color for iOS
+              inputAndroid: styles.pickerInput, // ✅ Apply grey color for Android
             }}
             useNativeAndroidPickerStyle={false}
-            Icon={() => {
-              return (
-                <Icon
-                  name="chevron-down"
-                  size={20}
-                  color="#333"
-                  style={styles.pickerIcon}
-                />
-              );
-            }}
+            hideIcon={true}
+            Icon={() => <Icon name="chevron-down" size={20} color="#333" />}
           />
         </View>
       </View>
@@ -168,6 +160,7 @@ const styles = StyleSheet.create({
     padding: 5,
     paddingHorizontal: 10,
     backgroundColor: "#f5f5f5",
+    flexDirection: "column",
   },
 
   //   input: {
@@ -194,10 +187,18 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   pickerContainer: {
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#ccc",
     borderRadius: 8,
     marginBottom: 10,
+    flexDirection: "column",
   },
+  pickerWrapper: {
+    backgroundColor: "#ccc",
+    borderRadius: 8,
+    padding: 5,
+    marginTop: 5,
+  },
+
   saveButton: {
     backgroundColor: "#000",
     padding: 15,
@@ -218,10 +219,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
+  // pickerInput: {
+  //   fontSize: 16,
+  //   color: "#ccc",
+  //   paddingRight: 30, // For space between text and arrow
+  // },
   pickerInput: {
     fontSize: 16,
-    color: "#333",
-    paddingRight: 30, // For space between text and arrow
+    color: "grey", // ✅ Set text color to grey
+    paddingVertical: 10,
+    paddingHorizontal: 12,
+    backgroundColor: "#f5f5f5", // Optional: Set background color
+    borderRadius: 8,
   },
   pickerIcon: {
     position: "absolute",
