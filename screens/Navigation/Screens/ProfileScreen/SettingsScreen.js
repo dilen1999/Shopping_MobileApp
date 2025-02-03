@@ -136,46 +136,72 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     marginBottom: 10,
   },
-
-  // FIXED inputContainer to stack elements in a column
+  sectionTitle: {
+    fontSize: 16,
+    marginBottom: 5,
+    color: "#ccc",
+  },
+  // Updated inputContainer with white background and shadow
   inputContainer: {
     width: "100%",
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#fff", // White background
     padding: 10,
     borderRadius: 8,
-    marginBottom: 10,
+    marginBottom: 20,
     flexDirection: "column", // Ensure label and input stack vertically
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3, // For Android shadow
   },
 
   inputText: {
     color: "#999",
-    marginBottom: 5, // Reduce space
+    marginBottom: 5,
   },
   input: {
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#fff", // White background
     borderRadius: 8,
     fontSize: 16,
     padding: 10,
-    borderWidth: 0, // Remove any borders
+    borderWidth: 0,
   },
 
+  // Updated notificationContainer with shadow
   notificationContainer: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     paddingVertical: 10,
+    backgroundColor: "#fff", // White background
+    borderRadius: 8,
+    paddingHorizontal: 15,
+    marginBottom: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3, // For Android shadow
   },
   notificationText: {
     fontSize: 14,
   },
+
+  // Updated helpCenter with shadow
   helpCenter: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     padding: 15,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "#fff", // White background
     borderRadius: 8,
     marginTop: 10,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 3, // For Android shadow
   },
   helpText: {
     fontSize: 14,
