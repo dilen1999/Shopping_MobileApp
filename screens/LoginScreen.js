@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     backgroundColor: "transparent",
     fontSize: 16,
-    color: "#333",
+    color: "#ccc",
     paddingHorizontal: 10,
     textAlignVertical: "center",
     outlineStyle: "none",
@@ -184,6 +184,7 @@ const styles = StyleSheet.create({
   signupButtonText: {
     color: "#333",
     fontSize: 16,
+    fontWeight: "bold",
   },
 });
 

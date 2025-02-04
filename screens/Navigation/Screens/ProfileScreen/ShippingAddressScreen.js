@@ -89,7 +89,10 @@ export default function ShippingAddressScreen({ navigation }) {
       />
 
       {/* Add Address Button */}
-      <TouchableOpacity style={styles.addButton}>
+      <TouchableOpacity
+        style={styles.addButton}
+        onPress={() => navigation.navigate("AddAddress")}
+      >
         <Icon name="add" size={30} />
       </TouchableOpacity>
     </View>
