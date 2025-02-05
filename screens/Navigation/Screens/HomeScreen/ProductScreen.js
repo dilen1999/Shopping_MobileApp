@@ -17,26 +17,30 @@ const ProductScreen = ({ route, navigation }) => {
 
   return (
     <View style={styles.container}>
-      {/* Back Button */}
-      <TouchableOpacity
-        onPress={() => navigation.goBack()}
-        style={styles.backButton}
-      >
-        <Icon name="chevron-back-outline" size={24} color="#333" />
-      </TouchableOpacity>
+      <View style={styles.productContainer}>
+        {/* Back Button */}
+        <TouchableOpacity
+          onPress={() => navigation.goBack()}
+          style={styles.backButton}
+        >
+          <Icon name="chevron-back-outline" size={24} color="#333" />
+        </TouchableOpacity>
 
-      {/* Product Image */}
-      <Image source={{ uri: product.image }} style={styles.productImage} />
+        {/* Product Image */}
+        <View style={styles.productImageContainer}>
+          <Image source={{ uri: product.image }} style={styles.productImage} />
+        </View>
 
-      {/* Color Options */}
-      <View style={styles.colorOptions}>
-        <View style={styles.colorCircle}></View>
-        <View
-          style={[styles.colorCircle, { backgroundColor: "#c5c5c5" }]}
-        ></View>
-        <View
-          style={[styles.colorCircle, { backgroundColor: "#f1b900" }]}
-        ></View>
+        {/* Color Options */}
+        <View style={styles.colorOptions}>
+          <View style={styles.colorCircle}></View>
+          <View
+            style={[styles.colorCircle, { backgroundColor: "#c5c5c5" }]}
+          ></View>
+          <View
+            style={[styles.colorCircle, { backgroundColor: "#f1b900" }]}
+          ></View>
+        </View>
       </View>
 
       {/* Product Info */}
@@ -116,11 +120,23 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
     elevation: 5,
   },
+  productImageContainer: {
+    borderRadiusBottomLeft: 50,
+    backgroundColor: "red",
+    width: "90%",
+    alignItem: "left",
+    borderRadius: 20,
+    flex: "row",
+    marginLeft: 20,
+    justifyContent: "end",
+  },
   productImage: {
     width: "100%",
-    height: 300,
-    resizeMode: "contain",
-    borderRadius: 10,
+    height: 350,
+    resizeMode: "cover",
+    opacity: 1,
+    borderRadius: 20,
+    borderRadiusBottomLeft: 50,
   },
   colorOptions: {
     position: "absolute",
@@ -132,6 +148,7 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 20,
   },
+
   colorCircle: {
     width: 30,
     height: 30,
