@@ -43,55 +43,62 @@ const ProductScreen = ({ route, navigation }) => {
         </View>
       </View>
 
-      {/* Product Info */}
-      <Text style={styles.productName}>{product.name}</Text>
+      <View style={styles.paddingContainer}>
+        {/* Product Info */}
+        <Text style={styles.productName}>{product.name}</Text>
 
-      {/* Price and Counter Row */}
-      <View style={styles.priceRow}>
-        <Text style={styles.productPrice}>{product.price}</Text>
-        <View style={styles.counter}>
-          <TouchableOpacity onPress={decrement} style={styles.counterButton}>
-            <Icon name="remove-outline" size={20} color="black" />
-          </TouchableOpacity>
-          <Text style={styles.counterText}>
-            {quantity.toString().padStart(2, "0")}
+        {/* Price and Counter Row */}
+        <View style={styles.priceRow}>
+          <Text style={styles.productPrice}>{product.price}</Text>
+          <View style={styles.counter}>
+            <TouchableOpacity onPress={decrement} style={styles.counterButton}>
+              <Icon name="remove-outline" size={20} color="black" />
+            </TouchableOpacity>
+            <Text style={styles.counterText}>
+              {quantity.toString().padStart(2, "0")}
+            </Text>
+            <TouchableOpacity onPress={increment} style={styles.counterButton}>
+              <Icon name="add-outline" size={20} color="black" />
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        {/* Reviews Row */}
+        <View style={styles.reviewRow}>
+          {/* Single Gold Star */}
+          <Icon
+            name="star"
+            size={20}
+            color="#f1b900"
+            style={styles.singleStar}
+          />
+          <Text style={styles.starPoint}>4.5</Text>
+          {/* Review Text */}
+          <Text style={styles.reviewText}>
+            {product.rating} ({product.reviews}50 reviews)
           </Text>
-          <TouchableOpacity onPress={increment} style={styles.counterButton}>
-            <Icon name="add-outline" size={20} color="black" />
+        </View>
+
+        {/* Description */}
+        <Text style={styles.productDescription}>
+          Minimal Stand is made of natural wood. The design is very simple and
+          minimal. This is truly one of the best furniture items for any family.
+          With 3 different colors, you can easily select the best match for your
+          home.
+        </Text>
+
+        {/* Action Row */}
+        <View style={styles.actionRow}>
+          <TouchableOpacity style={styles.saveButton}>
+            <Icon name="bookmark-outline" size={24} color="#333" />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.addToCartButton}
+            onPress={handleAddToCart}
+          >
+            <Text style={styles.addToCartText}>Add to cart</Text>
           </TouchableOpacity>
         </View>
-      </View>
-
-      {/* Reviews Row */}
-      <View style={styles.reviewRow}>
-        {/* Single Gold Star */}
-        <Icon name="star" size={20} color="#f1b900" style={styles.singleStar} />
-        <Text style={styles.starPoint}>4.5</Text>
-        {/* Review Text */}
-        <Text style={styles.reviewText}>
-          {product.rating} ({product.reviews}50 reviews)
-        </Text>
-      </View>
-
-      {/* Description */}
-      <Text style={styles.productDescription}>
-        Minimal Stand is made of natural wood. The design is very simple and
-        minimal. This is truly one of the best furniture items for any family.
-        With 3 different colors, you can easily select the best match for your
-        home.
-      </Text>
-
-      {/* Action Row */}
-      <View style={styles.actionRow}>
-        <TouchableOpacity style={styles.saveButton}>
-          <Icon name="bookmark-outline" size={24} color="#333" />
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.addToCartButton}
-          onPress={handleAddToCart}
-        >
-          <Text style={styles.addToCartText}>Add to cart</Text>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -101,12 +108,15 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#fff",
+    // padding: 20,
+  },
+  paddingContainer: {
     padding: 20,
   },
   backButton: {
     position: "absolute",
     top: 20,
-    left: 20,
+    left: 15,
     zIndex: 10,
     width: 40,
     height: 40,
@@ -121,27 +131,24 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   productImageContainer: {
-    borderRadiusBottomLeft: 50,
-    backgroundColor: "red",
-    width: "90%",
+    borderBottomLeftRadius: 50,
+    width: "100%",
     alignItem: "left",
-    borderRadius: 20,
     flex: "row",
     marginLeft: 20,
     justifyContent: "end",
   },
   productImage: {
     width: "100%",
-    height: 350,
+    height: 400,
     resizeMode: "cover",
-    opacity: 1,
-    borderRadius: 20,
-    borderRadiusBottomLeft: 50,
+    marginLeft: 20,
+    borderBottomLeftRadius: 50,
   },
   colorOptions: {
     position: "absolute",
     top: 100,
-    left: 20,
+    left: 15,
     flexDirection: "column",
     alignItems: "center",
     backgroundColor: "#f4f4f4",
@@ -154,7 +161,7 @@ const styles = StyleSheet.create({
     height: 30,
     borderRadius: 15,
     backgroundColor: "#333",
-    marginVertical: 5,
+    marginVertical: 10,
   },
   productName: {
     fontSize: 24,
