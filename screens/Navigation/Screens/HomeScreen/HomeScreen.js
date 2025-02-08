@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -7,6 +7,7 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
+  TextInput,
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -59,6 +60,9 @@ const products = [
 ];
 
 const HomeScreen = ({ navigation }) => {
+  const [searchVisible, setSearchVisible] = useState(false);
+  const [searchText, setSearchText] = useState("");
+
   const renderCategoryItem = ({ item, index }) => (
     <TouchableOpacity
       style={[styles.categoryItem, index === 0 && styles.activeCategoryItem]}
@@ -105,14 +109,23 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => setSearchVisible(!searchVisible)}>
           <Icon name="search" size={24} color="#333" />
         </TouchableOpacity>
-        <View>
-          <Text style={styles.title}>Make home</Text>
-          <Text style={styles.subtitle}>BEAUTIFUL</Text>
-        </View>
-        <TouchableOpacity>
+        {searchVisible ? (
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search..."
+            value={searchText}
+            onChangeText={setSearchText}
+          />
+        ) : (
+          <View>
+            <Text style={styles.title}>Make home</Text>
+            <Text style={styles.subtitle}>BEAUTIFUL</Text>
+          </View>
+        )}
+        <TouchableOpacity onPress={() => navigation.navigate("MyCart")}>
           <Icon name="cart-outline" size={24} color="#333" />
         </TouchableOpacity>
       </View>
@@ -149,6 +162,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  searchInput: {
+    flex: 1,
+    height: 40,
+    backgroundColor: "#f4f4f4",
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    marginLeft: 10,
+    marginRight: 10,
   },
   title: {
     fontSize: 20,
