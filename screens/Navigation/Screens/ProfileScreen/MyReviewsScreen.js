@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
+  TextInput,
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -39,6 +40,9 @@ const renderStars = (rating) => {
 };
 
 const MyReviewsScreen = ({ navigation }) => {
+  const [searchVisible, setSearchVisible] = useState(false);
+  const [searchText, setSearchText] = useState("");
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -46,9 +50,19 @@ const MyReviewsScreen = ({ navigation }) => {
           <Icon name="chevron-back-outline" size={24} color="#333" />
         </TouchableOpacity>
 
-        <Text style={styles.title}>My reviews</Text>
+        {searchVisible ? (
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search..."
+            value={searchText}
+            onChangeText={setSearchText}
+            autoFocus={true} // Focus input when search is opened
+          />
+        ) : (
+          <Text style={styles.title}>My reviews</Text>
+        )}
 
-        <TouchableOpacity onPress={() => console.log("Search clicked")}>
+        <TouchableOpacity onPress={() => setSearchVisible(!searchVisible)}>
           <Icon name="search-outline" size={24} color="#333" />
         </TouchableOpacity>
       </View>
@@ -96,6 +110,14 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     flex: 1,
+  },
+  searchInput: {
+    flex: 1,
+    height: 40,
+    backgroundColor: "#f4f4f4",
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    marginHorizontal: 10,
   },
   reviewCard: {
     backgroundColor: "#fff",

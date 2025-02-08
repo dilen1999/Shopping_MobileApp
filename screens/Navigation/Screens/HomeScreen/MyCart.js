@@ -11,7 +11,7 @@ import {
 import Icon from "react-native-vector-icons/Ionicons";
 
 const MyCart = ({ navigation }) => {
-  const cartData = [
+  const initialCartData = [
     {
       id: "4",
       title: "Minimal Desk",
@@ -32,10 +32,11 @@ const MyCart = ({ navigation }) => {
     },
   ];
 
-  const [quantities, setQuantities] = useState(cartData.map(() => 1));
+  const [cartItems, setCartItems] = useState(initialCartData);
+  const [quantities, setQuantities] = useState(cartItems.map(() => 1));
   const [promoCode, setPromoCode] = useState("");
   const [total, setTotal] = useState(
-    cartData.reduce((acc, item) => acc + item.price, 0)
+    initialCartData.reduce((acc, item) => acc + item.price, 0)
   );
 
   const increment = (index) => {
@@ -55,16 +56,22 @@ const MyCart = ({ navigation }) => {
   };
 
   const updateTotal = (quantities) => {
-    const newTotal = cartData.reduce(
+    const newTotal = cartItems.reduce(
       (acc, item, index) => acc + item.price * quantities[index],
       0
     );
     setTotal(newTotal);
   };
 
+  const removeItem = (id) => {
+    const updatedCart = cartItems.filter((item) => item.id !== id);
+    setCartItems(updatedCart);
+    setQuantities(quantities.slice(0, updatedCart.length));
+    updateTotal(quantities.slice(0, updatedCart.length));
+  };
+
   return (
     <View style={styles.container}>
-      {/* Header Row */}
       <View style={styles.headerRow}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
@@ -75,18 +82,14 @@ const MyCart = ({ navigation }) => {
         <Text style={styles.title}>My Cart</Text>
       </View>
 
-      {/* Cart Items */}
       <FlatList
-        data={cartData}
+        data={cartItems}
         keyExtractor={(item) => item.id}
         renderItem={({ item, index }) => (
           <View style={styles.cartItem}>
             <TouchableOpacity
               style={styles.closeIconContainer}
-              onPress={() => {
-                // Add your remove logic here
-                console.log(`Remove item with ID: ${item.id}`);
-              }}
+              onPress={() => removeItem(item.id)}
             >
               <Icon name="close-circle-outline" size={24} />
             </TouchableOpacity>
@@ -116,7 +119,6 @@ const MyCart = ({ navigation }) => {
         )}
       />
 
-      {/* Promo Code and Total Section */}
       <View style={styles.promoCodeContainer}>
         <TextInput
           style={styles.promoInput}
@@ -128,12 +130,12 @@ const MyCart = ({ navigation }) => {
           <Icon name="arrow-forward-outline" size={20} color="#fff" />
         </TouchableOpacity>
       </View>
+
       <View style={styles.totalContainer}>
         <Text style={styles.totalLabel}>Total:</Text>
         <Text style={styles.totalAmount}>${total.toFixed(2)}</Text>
       </View>
 
-      {/* Checkout Button */}
       <TouchableOpacity
         style={styles.checkoutButton}
         onPress={() => navigation.navigate("Checkout")}
@@ -145,25 +147,10 @@ const MyCart = ({ navigation }) => {
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: "#fff",
-  },
-  headerRow: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginBottom: 20,
-  },
-  backButton: {
-    marginRight: 10,
-  },
-  title: {
-    fontSize: 24,
-    fontWeight: "bold",
-    flex: 1,
-    textAlign: "center",
-  },
+  container: { flex: 1, padding: 20, backgroundColor: "#fff" },
+  headerRow: { flexDirection: "row", alignItems: "center", marginBottom: 20 },
+  backButton: { marginRight: 10 },
+  title: { fontSize: 24, fontWeight: "bold", flex: 1, textAlign: "center" },
   cartItem: {
     flexDirection: "row",
     marginBottom: 20,
@@ -175,44 +162,14 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "#f9f9f9",
   },
-  closeIconContainer: {
-    position: "absolute",
-    top: 10,
-    right: 10,
-    zIndex: 1,
-  },
-  itemImage: {
-    width: 80,
-    height: 80,
-    marginRight: 10,
-    borderRadius: 10,
-  },
-  itemDetails: {
-    flex: 1,
-  },
-  itemName: {
-    fontSize: 18,
-  },
-  itemPrice: {
-    fontSize: 16,
-    color: "black",
-    fontWeight: "bold",
-  },
-  counter: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: 10,
-  },
-  counterButton: {
-    padding: 10,
-    backgroundColor: "#f4f4f4",
-    borderRadius: 10,
-  },
-  counterText: {
-    fontSize: 16,
-    color: "black",
-    paddingHorizontal: 10,
-  },
+  closeIconContainer: { position: "absolute", top: 10, right: 10, zIndex: 1 },
+  itemImage: { width: 80, height: 80, marginRight: 10, borderRadius: 10 },
+  itemDetails: { flex: 1 },
+  itemName: { fontSize: 18 },
+  itemPrice: { fontSize: 16, color: "black", fontWeight: "bold" },
+  counter: { flexDirection: "row", alignItems: "center", marginTop: 10 },
+  counterButton: { padding: 10, backgroundColor: "#f4f4f4", borderRadius: 10 },
+  counterText: { fontSize: 16, color: "black", paddingHorizontal: 10 },
   promoCodeContainer: {
     flexDirection: "row",
     alignItems: "center",
@@ -241,16 +198,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 20,
   },
-  totalLabel: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#333",
-  },
-  totalAmount: {
-    fontSize: 18,
-    fontWeight: "bold",
-    color: "#333",
-  },
+  totalLabel: { fontSize: 18, fontWeight: "bold", color: "#333" },
+  totalAmount: { fontSize: 18, fontWeight: "bold", color: "#333" },
   checkoutButton: {
     backgroundColor: "#000",
     padding: 15,
@@ -258,11 +207,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginTop: 20,
   },
-  checkoutText: {
-    color: "#fff",
-    fontSize: 16,
-    fontWeight: "bold",
-  },
+  checkoutText: { color: "#fff", fontSize: 16, fontWeight: "bold" },
 });
 
 export default MyCart;
