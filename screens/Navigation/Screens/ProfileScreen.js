@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import {
   Text,
   View,
@@ -6,102 +6,89 @@ import {
   StyleSheet,
   TouchableOpacity,
   ScrollView,
+  TextInput,
 } from "react-native";
-// import { Asset } from "expo-asset";
 import profileImage from "../../../assets/profile.png";
 import Icon from "react-native-vector-icons/Ionicons";
 
-// const profileImage = Asset.fromModule(require("../../assets/profile.png")).uri;
-export class ProfileScreen extends Component {
-  render() {
-    return (
-      <ScrollView style={styles.container}>
-        <View style={styles.header}>
-          <TouchableOpacity>
-            <Icon name="search" size={24} color="#333" />
-          </TouchableOpacity>
+const ProfileScreen = ({ navigation }) => {
+  const [searchVisible, setSearchVisible] = useState(false);
+  const [searchText, setSearchText] = useState("");
+
+  return (
+    <ScrollView style={styles.container}>
+      {/* Header Section */}
+      <View style={styles.header}>
+        <TouchableOpacity onPress={() => setSearchVisible(!searchVisible)}>
+          <Icon name="search" size={24} color="#333" />
+        </TouchableOpacity>
+        {searchVisible ? (
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search..."
+            value={searchText}
+            onChangeText={setSearchText}
+          />
+        ) : (
           <Text style={styles.title}>Profile</Text>
-          <TouchableOpacity>
-            <Icon name="log-out-outline" size={24} color="#333" />
-          </TouchableOpacity>
-        </View>
+        )}
+        <TouchableOpacity onPress={() => navigation.navigate("GetStarted")}>
+          <Icon name="log-out-outline" size={24} color="#333" />
+        </TouchableOpacity>
+      </View>
 
-        {/* Profile Information */}
-        <View style={styles.profileContainer}>
-          {/* <Image
-            source={require("../../../assets/profile.png")}
-            style={styles.profileImage}
-          /> */}
-          <Image source={profileImage} style={styles.profileImage} />;
-          <View style={styles.profileText}>
-            <Text style={styles.profileName}>Bruno Pham</Text>
-            <Text style={styles.profileEmail}>bruno203@gmail.com</Text>
+      {/* Profile Information */}
+      <View style={styles.profileContainer}>
+        <Image source={profileImage} style={styles.profileImage} />
+        <View style={styles.profileText}>
+          <Text style={styles.profileName}>Bruno Pham</Text>
+          <Text style={styles.profileEmail}>bruno203@gmail.com</Text>
+        </View>
+      </View>
+
+      {/* Profile Options */}
+      {[
+        {
+          title: "My orders",
+          description: "Already have 10 orders",
+          screen: "MyOrders",
+        },
+        {
+          title: "Shipping Addresses",
+          description: "03 Addresses",
+          screen: "ShippingAddress",
+        },
+        {
+          title: "Payment Method",
+          description: "You have 2 cards",
+          screen: "PaymentMethod",
+        },
+        {
+          title: "My reviews",
+          description: "Reviews for 5 items",
+          screen: "MyReview",
+        },
+        {
+          title: "Setting",
+          description: "Notification, Password, FAQ, Contact",
+          screen: "Setting",
+        },
+      ].map((item, index) => (
+        <TouchableOpacity
+          key={index}
+          style={[styles.menuContainer, styles.menuItem]}
+          onPress={() => navigation.navigate(item.screen)}
+        >
+          <View style={styles.menuText}>
+            <Text style={styles.menuTitle}>{item.title}</Text>
+            <Text style={styles.menuDescription}>{item.description}</Text>
           </View>
-        </View>
-
-        {/* Profile Options */}
-        <View>
-          <TouchableOpacity
-            style={[styles.menuContainer, styles.menuItem]}
-            onPress={() => this.props.navigation.navigate("MyOrders")}
-          >
-            <View style={styles.menuText}>
-              <Text style={styles.menuTitle}>My orders</Text>
-              <Text style={styles.menuDescription}>Already have 10 orders</Text>
-            </View>
-            <Text style={styles.arrow}>›</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[styles.menuContainer, styles.menuItem]}
-            onPress={() => this.props.navigation.navigate("ShippingAddress")}
-          >
-            <View style={styles.menuText}>
-              <Text style={styles.menuTitle}>Shipping Addresses</Text>
-              <Text style={styles.menuDescription}>03 Addresses</Text>
-            </View>
-            <Text style={styles.arrow}>›</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[styles.menuContainer, styles.menuItem]}
-            onPress={() => this.props.navigation.navigate("PaymentMethod")}
-          >
-            <View style={styles.menuText}>
-              <Text style={styles.menuTitle}>Payment Method</Text>
-              <Text style={styles.menuDescription}>You have 2 cards</Text>
-            </View>
-            <Text style={styles.arrow}>›</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[styles.menuContainer, styles.menuItem]}
-            onPress={() => this.props.navigation.navigate("MyReview")}
-          >
-            <View style={styles.menuText}>
-              <Text style={styles.menuTitle}>My reviews</Text>
-              <Text style={styles.menuDescription}>Reviews for 5 items</Text>
-            </View>
-            <Text style={styles.arrow}>›</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-            style={[styles.menuContainer, styles.menuItem]}
-            onPress={() => this.props.navigation.navigate("Setting")}
-          >
-            <View style={styles.menuText}>
-              <Text style={styles.menuTitle}>Setting</Text>
-              <Text style={styles.menuDescription}>
-                Notification, Password, FAQ, Contact
-              </Text>
-            </View>
-            <Text style={styles.arrow}>›</Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
-    );
-  }
-}
+          <Text style={styles.arrow}>›</Text>
+        </TouchableOpacity>
+      ))}
+    </ScrollView>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -119,6 +106,13 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
+  },
+  searchInput: {
+    flex: 1,
+    height: 40,
+    backgroundColor: "#f4f4f4",
+    borderRadius: 10,
+    paddingHorizontal: 10,
   },
   profileContainer: {
     flexDirection: "row",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   View,
   Text,
@@ -6,6 +6,7 @@ import {
   Image,
   TouchableOpacity,
   StyleSheet,
+  TextInput,
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
@@ -61,6 +62,9 @@ const favoritesData = [
 ];
 
 const FavoritesScreen = () => {
+  const [searchVisible, setSearchVisible] = useState(false);
+  const [searchText, setSearchText] = useState("");
+
   const renderItem = ({ item }) => (
     <View style={styles.itemContainer}>
       <Image source={{ uri: item.image }} style={styles.image} />
@@ -80,10 +84,20 @@ const FavoritesScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => setSearchVisible(!searchVisible)}>
           <Icon name="search" size={24} color="#333" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Favorites</Text>
+        {searchVisible ? (
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search..."
+            value={searchText}
+            onChangeText={setSearchText}
+          />
+        ) : (
+          <Text style={styles.headerTitle}>Favorites</Text>
+        )}
+
         <TouchableOpacity>
           <Icon name="cart-outline" size={24} color="#333" />
         </TouchableOpacity>
@@ -112,6 +126,15 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     marginBottom: 16,
+  },
+  searchInput: {
+    flex: 1,
+    height: 40,
+    backgroundColor: "#f4f4f4",
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    marginLeft: 10,
+    marginRight: 10,
   },
   headerTitle: {
     fontSize: 20,
