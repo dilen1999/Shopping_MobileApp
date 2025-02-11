@@ -4,13 +4,13 @@ import {
   Text,
   StyleSheet,
   FlatList,
-  ScrollView,
   Image,
   TouchableOpacity,
   TextInput,
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 
+// Categories list
 const categories = [
   { id: 1, name: "Popular", icon: "★" },
   { id: 2, name: "Chair", icon: "🪑" },
@@ -20,100 +20,281 @@ const categories = [
   { id: 6, name: "Lamp", icon: "💡" },
 ];
 
-const products = [
-  {
-    id: 1,
-    name: "Black Simple Lamp",
-    price: "$12.00",
-    image: "https://picsum.photos/200/400",
-  },
-  {
-    id: 2,
-    name: "Minimal Stand",
-    price: "$25.00",
-    image: "https://picsum.photos/200/300",
-  },
-  // {
-  //   id: 3,
-  //   name: "Coffee Chair",
-  //   price: "$20.00",
-  //   image: "https://picsum.photos/200/300",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Simple Desk",
-  //   price: "$50.00",
-  //   image: "https://picsum.photos/200/300",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Coffee Chair",
-  //   price: "$20.00",
-  //   image: "https://picsum.photos/200/300",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Simple Desk",
-  //   price: "$50.00",
-  //   image: "https://picsum.photos/200/300",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Coffee Chair",
-  //   price: "$20.00",
-  //   image: "https://picsum.photos/200/300",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Simple Desk",
-  //   price: "$50.00",
-  //   image: "https://picsum.photos/200/300",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Coffee Chair",
-  //   price: "$20.00",
-  //   image: "https://picsum.photos/200/300",
-  // },
-  // {
-  //   id: 4,
-  //   name: "Simple Desk",
-  //   price: "$50.00",
-  //   image: "https://picsum.photos/200/300",
-  // },
-];
+// Product data categorized
+const categoryProductMap = {
+  Popular: [
+    {
+      id: 1,
+      name: "Black Simple Lamp",
+      price: "$12.00",
+      image: "https://picsum.photos/200/400",
+    },
+    {
+      id: 2,
+      name: "Minimal Stand",
+      price: "$25.00",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      id: 3,
+      name: "Black Simple Lamp",
+      price: "$12.00",
+      image: "https://picsum.photos/200/400",
+    },
+    {
+      id: 4,
+      name: "Minimal Stand",
+      price: "$25.00",
+      image: "https://picsum.photos/200/300",
+    },
+    {
+      id: 5,
+      name: "Black Simple Lamp",
+      price: "$12.00",
+      image: "https://picsum.photos/200/400",
+    },
+    {
+      id: 6,
+      name: "Minimal Stand",
+      price: "$25.00",
+      image: "https://picsum.photos/200/300",
+    },
+  ],
+  Chair: [
+    {
+      id: 1,
+      name: "Luxury Chair",
+      price: "$30.00",
+      image: "https://picsum.photos/200/301",
+    },
+    {
+      id: 2,
+      name: "Wooden Chair",
+      price: "$35.00",
+      image: "https://picsum.photos/200/302",
+    },
+    {
+      id: 3,
+      name: "Luxury Chair",
+      price: "$30.00",
+      image: "https://picsum.photos/200/301",
+    },
+    {
+      id: 4,
+      name: "Wooden Chair",
+      price: "$35.00",
+      image: "https://picsum.photos/200/302",
+    },
+    {
+      id: 5,
+      name: "Luxury Chair",
+      price: "$30.00",
+      image: "https://picsum.photos/200/301",
+    },
+    {
+      id: 6,
+      name: "Wooden Chair",
+      price: "$35.00",
+      image: "https://picsum.photos/200/302",
+    },
+  ],
+  Table: [
+    {
+      id: 1,
+      name: "Modern Table",
+      price: "$40.00",
+      image: "https://picsum.photos/200/303",
+    },
+    {
+      id: 2,
+      name: "Modern Table",
+      price: "$40.00",
+      image: "https://picsum.photos/200/303",
+    },
+    {
+      id: 3,
+      name: "Modern Table",
+      price: "$40.00",
+      image: "https://picsum.photos/200/303",
+    },
+    {
+      id: 4,
+      name: "Modern Table",
+      price: "$40.00",
+      image: "https://picsum.photos/200/303",
+    },
+    {
+      id: 5,
+      name: "Modern Table",
+      price: "$40.00",
+      image: "https://picsum.photos/200/303",
+    },
+    {
+      id: 6,
+      name: "Modern Table",
+      price: "$40.00",
+      image: "https://picsum.photos/200/303",
+    },
+  ],
+  Armchair: [
+    {
+      id: 1,
+      name: "Comfy Armchair",
+      price: "$50.00",
+      image: "https://picsum.photos/200/304",
+    },
+    {
+      id: 2,
+      name: "Comfy Armchair",
+      price: "$50.00",
+      image: "https://picsum.photos/200/304",
+    },
+    {
+      id: 3,
+      name: "Comfy Armchair",
+      price: "$50.00",
+      image: "https://picsum.photos/200/304",
+    },
+    {
+      id: 4,
+      name: "Comfy Armchair",
+      price: "$50.00",
+      image: "https://picsum.photos/200/304",
+    },
+    {
+      id: 5,
+      name: "Comfy Armchair",
+      price: "$50.00",
+      image: "https://picsum.photos/200/304",
+    },
+    {
+      id: 6,
+      name: "Comfy Armchair",
+      price: "$50.00",
+      image: "https://picsum.photos/200/304",
+    },
+  ],
+  Bed: [
+    {
+      id: 1,
+      name: "King Size Bed",
+      price: "$200.00",
+      image: "https://picsum.photos/200/305",
+    },
+    {
+      id: 2,
+      name: "King Size Bed",
+      price: "$200.00",
+      image: "https://picsum.photos/200/305",
+    },
+    {
+      id: 3,
+      name: "King Size Bed",
+      price: "$200.00",
+      image: "https://picsum.photos/200/305",
+    },
+    {
+      id: 4,
+      name: "King Size Bed",
+      price: "$200.00",
+      image: "https://picsum.photos/200/305",
+    },
+    {
+      id: 5,
+      name: "King Size Bed",
+      price: "$200.00",
+      image: "https://picsum.photos/200/305",
+    },
+    {
+      id: 6,
+      name: "King Size Bed",
+      price: "$200.00",
+      image: "https://picsum.photos/200/305",
+    },
+  ],
+  Lamp: [
+    {
+      id: 1,
+      name: "Stylish Lamp",
+      price: "$18.00",
+      image: "https://picsum.photos/200/306",
+    },
+    {
+      id: 2,
+      name: "Stylish Lamp",
+      price: "$18.00",
+      image: "https://picsum.photos/200/306",
+    },
+    {
+      id: 3,
+      name: "Stylish Lamp",
+      price: "$18.00",
+      image: "https://picsum.photos/200/306",
+    },
+    {
+      id: 4,
+      name: "Stylish Lamp",
+      price: "$18.00",
+      image: "https://picsum.photos/200/306",
+    },
+    {
+      id: 5,
+      name: "Stylish Lamp",
+      price: "$18.00",
+      image: "https://picsum.photos/200/306",
+    },
+    {
+      id: 6,
+      name: "Stylish Lamp",
+      price: "$18.00",
+      image: "https://picsum.photos/200/306",
+    },
+  ],
+};
 
 const HomeScreen = ({ navigation }) => {
   const [searchVisible, setSearchVisible] = useState(false);
   const [searchText, setSearchText] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("Popular");
 
-  const renderCategoryItem = ({ item, index }) => (
+  const filteredProducts = categoryProductMap[selectedCategory] || [];
+
+  // Render Category Items
+  const renderCategoryItem = ({ item }) => (
     <TouchableOpacity
-      style={[styles.categoryItem, index === 0 && styles.activeCategoryItem]}
+      style={[
+        styles.categoryItem,
+        selectedCategory === item.name && styles.activeCategoryItem,
+      ]}
+      onPress={() => setSelectedCategory(item.name)}
     >
       <View
         style={[
           styles.categoryIconContainer,
-          index === 0 && styles.activeCategoryIconContainer,
+          selectedCategory === item.name && styles.activeCategoryIconContainer,
         ]}
       >
         <Text
           style={[
             styles.categoryIcon,
-            index === 0 && styles.activeCategoryIcon,
+            selectedCategory === item.name && styles.activeCategoryIcon,
           ]}
         >
           {item.icon}
         </Text>
       </View>
       <Text
-        style={[styles.categoryText, index === 0 && styles.activeCategoryText]}
+        style={[
+          styles.categoryText,
+          selectedCategory === item.name && styles.activeCategoryText,
+        ]}
       >
         {item.name}
       </Text>
     </TouchableOpacity>
   );
 
+  // Render Product Items
   const renderProductItem = ({ item }) => (
     <TouchableOpacity
       style={styles.productCard}
@@ -132,6 +313,7 @@ const HomeScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
+      {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity onPress={() => setSearchVisible(!searchVisible)}>
           <Icon name="search" size={24} color="#333" />
@@ -154,29 +336,28 @@ const HomeScreen = ({ navigation }) => {
         </TouchableOpacity>
       </View>
 
-      <ScrollView horizontal style={styles.categoryList}>
-        <FlatList
-          data={categories}
-          renderItem={renderCategoryItem}
-          keyExtractor={(item) => item.id.toString()}
-          horizontal
-          contentContainerStyle={{ paddingHorizontal: 10 }}
-        />
-      </ScrollView>
+      {/* Categories List */}
+      <FlatList
+        data={categories}
+        renderItem={renderCategoryItem}
+        keyExtractor={(item) => item.id.toString()}
+        horizontal
+        contentContainerStyle={styles.categoryList}
+      />
 
-      <View style={{ flex: 1 }}>
-        <FlatList
-          data={products}
-          renderItem={renderProductItem}
-          keyExtractor={(item, index) => index.toString()}
-          numColumns={2}
-          contentContainerStyle={{ flexGrow: 1, paddingBottom: 20 }}
-        />
-      </View>
+      {/* Products List */}
+      <FlatList
+        data={filteredProducts}
+        renderItem={renderProductItem}
+        keyExtractor={(item) => item.id.toString()}
+        numColumns={2}
+        contentContainerStyle={styles.productList}
+      />
     </View>
   );
 };
 
+// Styles
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -200,7 +381,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    fontWeight: "semi-bold",
+    fontWeight: "600",
     color: "#8c8d8d",
     textAlign: "center",
   },
@@ -211,15 +392,12 @@ const styles = StyleSheet.create({
   },
   categoryList: {
     marginVertical: 10,
-    flexDirection: "row",
-    height: 80,
-    flexShrink: 0,
+    paddingHorizontal: 10,
   },
   categoryItem: {
     alignItems: "center",
-    // marginHorizontal: 8,
-    width: 60,
-    minHeight: 80,
+    marginHorizontal: 8,
+    height: 120,
   },
   categoryIconContainer: {
     width: 50,
@@ -228,7 +406,7 @@ const styles = StyleSheet.create({
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 5,
+    marginBottom: 10,
   },
   activeCategoryIconContainer: {
     backgroundColor: "#333",
@@ -236,8 +414,6 @@ const styles = StyleSheet.create({
   categoryIcon: {
     fontSize: 30,
     color: "#8c8d8d",
-    alignItems: "center",
-    justifyContent: "center",
   },
   activeCategoryIcon: {
     color: "#fff",
@@ -245,7 +421,6 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 14,
     color: "#8c8d8d",
-    textAlign: "center",
   },
   activeCategoryText: {
     color: "#333",
@@ -288,8 +463,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "600",
     color: "#333",
-    marginBottom: 5,
-    textAlign: "left",
     paddingHorizontal: 5,
     paddingBottom: 5,
   },
@@ -297,7 +470,6 @@ const styles = StyleSheet.create({
     fontSize: 12,
     fontWeight: "bold",
     color: "black",
-    textAlign: "left",
     paddingHorizontal: 5,
     paddingBottom: 10,
   },
