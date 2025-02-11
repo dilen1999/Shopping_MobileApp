@@ -5,6 +5,7 @@ import FavoritesScreen from "./Screens/FavoritesScreen";
 import NotificationScreen from "./Screens/NotificationScreen";
 import HomeStackNavigator from "./HomeStackNavigator";
 import ProfileStackNavigator from "./ProfileStackNavigator";
+import NotificationStackNavigator from "./NotificationStackNavigator";
 
 const Tab = createBottomTabNavigator();
 
@@ -34,7 +35,7 @@ const MainContainer = () => {
     >
       <Tab.Screen name="Home" component={HomeStackNavigator} />
       <Tab.Screen name="Favorites" component={FavoritesScreen} />
-      <Tab.Screen name="Notification" component={NotificationScreen} />
+      <Tab.Screen name="Notification" component={NotificationStackNavigator} />
       <Tab.Screen name="Profile" component={ProfileStackNavigator} />
     </Tab.Navigator>
   );
