@@ -33,30 +33,54 @@ const products = [
     price: "$25.00",
     image: "https://picsum.photos/200/300",
   },
-  {
-    id: 3,
-    name: "Coffee Chair",
-    price: "$20.00",
-    image: "https://picsum.photos/200/300",
-  },
-  {
-    id: 4,
-    name: "Simple Desk",
-    price: "$50.00",
-    image: "https://picsum.photos/200/300",
-  },
-  {
-    id: 3,
-    name: "Coffee Chair",
-    price: "$20.00",
-    image: "https://picsum.photos/200/300",
-  },
-  {
-    id: 4,
-    name: "Simple Desk",
-    price: "$50.00",
-    image: "https://picsum.photos/200/300",
-  },
+  // {
+  //   id: 3,
+  //   name: "Coffee Chair",
+  //   price: "$20.00",
+  //   image: "https://picsum.photos/200/300",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Simple Desk",
+  //   price: "$50.00",
+  //   image: "https://picsum.photos/200/300",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Coffee Chair",
+  //   price: "$20.00",
+  //   image: "https://picsum.photos/200/300",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Simple Desk",
+  //   price: "$50.00",
+  //   image: "https://picsum.photos/200/300",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Coffee Chair",
+  //   price: "$20.00",
+  //   image: "https://picsum.photos/200/300",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Simple Desk",
+  //   price: "$50.00",
+  //   image: "https://picsum.photos/200/300",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Coffee Chair",
+  //   price: "$20.00",
+  //   image: "https://picsum.photos/200/300",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Simple Desk",
+  //   price: "$50.00",
+  //   image: "https://picsum.photos/200/300",
+  // },
 ];
 
 const HomeScreen = ({ navigation }) => {
@@ -140,13 +164,15 @@ const HomeScreen = ({ navigation }) => {
         />
       </ScrollView>
 
-      <FlatList
-        data={products}
-        renderItem={renderProductItem}
-        keyExtractor={(item) => item.id.toString()}
-        numColumns={2}
-        contentContainerStyle={styles.productList}
-      />
+      <View style={{ flex: 1 }}>
+        <FlatList
+          data={products}
+          renderItem={renderProductItem}
+          keyExtractor={(item, index) => index.toString()}
+          numColumns={2}
+          contentContainerStyle={{ flexGrow: 1, paddingBottom: 20 }}
+        />
+      </View>
     </View>
   );
 };
@@ -186,11 +212,14 @@ const styles = StyleSheet.create({
   categoryList: {
     marginVertical: 10,
     flexDirection: "row",
-    height: 150,
+    height: 80,
+    flexShrink: 0,
   },
   categoryItem: {
     alignItems: "center",
-    marginHorizontal: 8,
+    // marginHorizontal: 8,
+    width: 60,
+    minHeight: 80,
   },
   categoryIconContainer: {
     width: 50,
@@ -198,7 +227,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#f4f4f4",
     borderRadius: 12,
     alignItems: "center",
-    marginBottom: 10,
+    justifyContent: "center",
+    marginBottom: 5,
   },
   activeCategoryIconContainer: {
     backgroundColor: "#333",
@@ -215,6 +245,7 @@ const styles = StyleSheet.create({
   categoryText: {
     fontSize: 14,
     color: "#8c8d8d",
+    textAlign: "center",
   },
   activeCategoryText: {
     color: "#333",
