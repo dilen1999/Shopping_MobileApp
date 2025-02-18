@@ -1,0 +1,6 @@
+@ShoppingAppMobile_HostAddress = http://localhost:5038
+
+GET {{ShoppingAppMobile_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
