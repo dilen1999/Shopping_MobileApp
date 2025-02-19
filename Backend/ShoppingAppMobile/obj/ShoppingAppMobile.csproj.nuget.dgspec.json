@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FaiTe PVT\\Projects\\New folder\\FAITE GIT\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj": {}
+    "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj": {}
   },
   "projects": {
-    "D:\\FaiTe PVT\\Projects\\New folder\\FAITE GIT\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj": {
+    "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FaiTe PVT\\Projects\\New folder\\FAITE GIT\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj",
+        "projectUniqueName": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj",
         "projectName": "ShoppingAppMobile",
-        "projectPath": "D:\\FaiTe PVT\\Projects\\New folder\\FAITE GIT\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj",
+        "projectPath": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj",
         "packagesPath": "C:\\Users\\dilen\\.nuget\\packages\\",
-        "outputPath": "D:\\FaiTe PVT\\Projects\\New folder\\FAITE GIT\\Backend\\ShoppingAppMobile\\obj\\",
+        "outputPath": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dilen\\AppData\\Roaming\\NuGet\\NuGet.Config",

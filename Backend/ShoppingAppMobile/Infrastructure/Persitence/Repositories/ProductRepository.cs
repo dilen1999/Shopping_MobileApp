@@ -17,5 +17,15 @@ namespace ShoppingAppMobile.Infrastructure.Persitence.Repositories
             _context.Products.Add(product);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Product> GetProductByIdAsync(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            //if (product == null)
+            //{
+            //  =
+            //}
+            return product;
+        }
     }
 }

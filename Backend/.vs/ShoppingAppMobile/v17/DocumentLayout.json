@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\infrastructure\\persitence\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\infrastructure\\persitence\\repositories\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\core\\application\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\core\\application\\interfaces\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\core\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\core\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\presentation\\controller\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\presentation\\controller\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\ProductRepository.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\ProductRepository.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\ProductRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T18:24:44.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Interfaces\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Interfaces\\IProductRepository.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Interfaces\\IProductRepository.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Interfaces\\IProductRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T18:24:23.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Services\\ProductService.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\ProductService.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Services\\ProductService.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBYAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T18:24:05.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\ProductController.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\ProductController.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\ProductController.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Presentation\\Controller\\ProductController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAA1wBoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-19T18:23:22.941Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

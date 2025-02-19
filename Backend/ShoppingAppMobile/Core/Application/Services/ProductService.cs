@@ -17,5 +17,9 @@ namespace ShoppingAppMobile.Core.Application.Services
 
             await _productRepository.AddProductAsync(product);
         }
+        public async Task<Product> GetProductByIdAsync(int id)
+        {
+            return await _productRepository.GetProductByIdAsync(id);
+        }
     }
 }

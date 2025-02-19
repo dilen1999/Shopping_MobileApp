@@ -24,5 +24,16 @@ namespace ShoppingAppMobile.Presentation.Controller
             await _productService.AddProductAsync(product);
             return Ok("Product added successfully.");
         }
+
+        [HttpGet("get/{id}")]
+        public async Task<IActionResult> GetProduct(int id)
+        {
+            var product = await _productService.GetProductByIdAsync(id);
+
+            if (product == null)
+                return NotFound("Product is not found.");
+            return Ok(product);
+
+        }
     }
 }
