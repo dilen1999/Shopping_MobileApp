@@ -6,5 +6,6 @@ namespace ShoppingAppMobile.Core.Application.Interfaces
     {
         Task AddProductAsync(Product product);
         Task<Product> GetProductByIdAsync(int id);
+        Task<Product> GetProductsAsync();
     }
 }

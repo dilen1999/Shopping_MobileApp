@@ -35,5 +35,12 @@ namespace ShoppingAppMobile.Presentation.Controller
             return Ok(product);
 
         }
+
+        [HttpGet("get")]
+        public async Task<IActionResult> GetProducts()
+        {
+            var product = await _productService.GetProductsAsync();
+            return Ok(product);
+        }
     }
 }

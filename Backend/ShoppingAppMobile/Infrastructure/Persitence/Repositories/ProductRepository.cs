@@ -27,5 +27,11 @@ namespace ShoppingAppMobile.Infrastructure.Persitence.Repositories
             //}
             return product;
         }
+
+        public async Task<Product> GetProductsAsync()
+        {
+            var product = await _context.Products.FindAsync();
+            return product;
+        }
     }
 }
