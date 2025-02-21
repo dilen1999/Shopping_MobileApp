@@ -21,9 +21,20 @@ namespace ShoppingAppMobile.Core.Application.Services
         {
             return await _productRepository.GetProductByIdAsync(id);
         }
-        public async Task<Product> GetProductsAsync()
+        public async Task<List<Product>> GetProductsAsync()
         {
             return await _productRepository.GetProductsAsync();
+        }
+        public async Task UpdateProductAsync(Product product)
+        {
+            if(product == null)
+                throw new ArgumentNullException(nameof(product));
+
+            await  _productRepository.UpdateProductAsync(product);
+        }
+        public async Task DeleteProductByIdAsync(int id)
+        {
+            await _productRepository.DeleteProductByIdAsync(id);
         }
     }
 }
