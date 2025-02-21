@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ShoppingAppMobile.Core.Domain.Entities;
+using System.Reflection.Emit;
 
 namespace ShoppingAppMobile.Infrastructure.Persitence
 {
@@ -9,6 +10,10 @@ namespace ShoppingAppMobile.Infrastructure.Persitence
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Cart> Carts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<Payment> Payments { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -28,10 +33,11 @@ namespace ShoppingAppMobile.Infrastructure.Persitence
                             entity.Property(p => p.IsDeleted)
                                   .HasDefaultValue(false);
                         });
-            modelBuilder.Entity<Customer>(entity =>
-            {
-                entity.ToTable("Customer");
-            });
+            modelBuilder.Entity<Customer>(entity =>{entity.ToTable("Customer");});
+            modelBuilder.Entity<Review>(entity =>{entity.ToTable("Review");});
+            modelBuilder.Entity<Cart>(entity => { entity.ToTable("Cart"); });
+            modelBuilder.Entity<Order>(entity => { entity.ToTable("Order"); });
+            modelBuilder.Entity<Payment>(entity => { entity.ToTable("Payment"); });
         }
     }
 }

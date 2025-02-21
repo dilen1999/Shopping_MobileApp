@@ -8,5 +8,6 @@ namespace ShoppingAppMobile.Core.Application.Interfaces
         Task<Customer> GetCustomerByIdAsync(int id);
         Task<List<Customer>> GetCustomersAsync();
         Task UpdateCustomerAsync(Customer customer);
+        Task DeleteCustomerByIdAsync(int id);
     }
 }

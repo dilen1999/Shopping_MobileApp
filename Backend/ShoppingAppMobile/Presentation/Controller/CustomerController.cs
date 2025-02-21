@@ -58,5 +58,17 @@ namespace ShoppingAppMobile.Presentation.Controller
             await _customerService.UpdateCustomerAsync(customer);
             return Ok(customer);
         }
+
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteCustomer(int id)
+        {
+            var exisitingcoustomer = await _customerService.GetCustomerByIdAsync(id);
+            if(exisitingcoustomer == null)
+            {
+                return BadRequest("Coustomer Not Found");
+            }
+            await _customerService.DeleteCustomerByIdAsync(id);
+            return Ok("Customer deleted successfully");
+        }
     }
 }

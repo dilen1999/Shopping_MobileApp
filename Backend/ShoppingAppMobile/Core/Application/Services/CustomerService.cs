@@ -30,5 +30,10 @@ namespace ShoppingAppMobile.Core.Application.Services
             if(customer == null) throw new ArgumentNullException( nameof(customer));
             await _customerRepository.UpdateCustomerAsync(customer);
         }
+
+        public async Task DeleteCustomerByIdAsync(int id)
+        {
+            await _customerRepository.DeleteCustomerByIdAsync(id);
+        }
     }
 }

@@ -58,5 +58,16 @@ namespace ShoppingAppMobile.Infrastructure.Persitence.Repositories
                 throw new ArgumentException("Customer not found");
             }
         }
+
+        public async Task DeleteCustomerByIdAsync(int id)
+        {
+            var customer = await _context.Customers.FindAsync(id);
+            if(customer != null)
+            {
+                customer.IsDeleted = true;
+                _context.Customers.Update(customer);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }
