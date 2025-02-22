@@ -14,13 +14,14 @@ namespace
 
         [EmailAddress]
         public string Email { get; set; }
+        public string Password { get; set; }
 
-        public string _password;
-        public string Password 
-        {
-            get => _password;
-            set => _password =BCrypt.Net.BCrypt.HashPassword(value);
-        }
+        //public string _password;
+        //public string Password 
+        //{
+        //    get => _password;
+        //    set => _password =BCrypt.Net.BCrypt.HashPassword(value);
+        //}
         public string ProfilePicture { get; set; }
         public string Role { get; set; }
         public int? PaymentId { get; set; }

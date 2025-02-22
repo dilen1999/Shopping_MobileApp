@@ -381,3 +381,5 @@ D:\FaiTe PVT\Projects\New folder\ShoppingAppPersonal\Backend\ShoppingAppMobile\o
 D:\FaiTe PVT\Projects\New folder\ShoppingAppPersonal\Backend\ShoppingAppMobile\obj\Debug\net8.0\ShoppingAppMobile.genruntimeconfig.cache
 D:\FaiTe PVT\Projects\New folder\ShoppingAppPersonal\Backend\ShoppingAppMobile\obj\Debug\net8.0\ref\ShoppingAppMobile.dll
 D:\FaiTe PVT\Projects\New folder\ShoppingAppPersonal\Backend\ShoppingAppMobile\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\FaiTe PVT\Projects\New folder\ShoppingAppPersonal\Backend\ShoppingAppMobile\bin\Debug\net8.0\Scalar.AspNetCore.dll
+D:\FaiTe PVT\Projects\New folder\ShoppingAppPersonal\Backend\ShoppingAppMobile\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
