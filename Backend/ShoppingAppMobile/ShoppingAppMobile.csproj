@@ -26,7 +26,6 @@
 
   <ItemGroup>
     <Folder Include="Core\Domain\Common\" />
-    <Folder Include="Core\Domain\IRepository\" />
     <Folder Include="Test\" />
   </ItemGroup>
 

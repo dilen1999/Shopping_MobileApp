@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using ShoppingAppMobile.Core.Application.Dtos;
+using ShoppingAppMobile.Core.Application.Services;
 using ShoppingAppMobile.Core.Domain.Entities;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -12,58 +13,57 @@ namespace ShoppingAppMobile.Presentation.Controller
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthController(IConfiguration configuration) : ControllerBase
+    public class AuthController : ControllerBase
     {
-        public static Customer user = new();
-        [HttpPost("register")]
-        public ActionResult<Customer> Register(UserDTO request)
+        private readonly AuthService _authService;
+        public AuthController(AuthService authService)
         {
-            var hashedPassword = new PasswordHasher<Customer>()
-                .HashPassword(user, request.Password);
-
-            user.Email = request.Email;
-            user.Password = hashedPassword;
-
+            _authService = authService;
+        }
+        //public static Customer user = new();
+        [HttpPost("register")]
+        public async Task<ActionResult<Customer>> Register(UserDTO request)
+        {
+           var user = await _authService.RegisterAsync(request);
+            if (user == null)
+            {
+                return BadRequest("Email already exists");
+            }
             return Ok(user);
         }
 
-        [HttpPost]
-        public ActionResult<string> Login(UserDTO request)
+        [HttpPost("login")]
+        public async Task<ActionResult<string>> Login(UserDTO request)
         {
-            if (user.Email != request.Email)
+            var token = await _authService.LoginAsync(request);
+            if (token == null)
             {
-                return BadRequest("User Not Found");
+                return BadRequest("Invalid email or password");
             }
-            if(new PasswordHasher<Customer>().VerifyHashedPassword(user, user.Password, request.Password) == PasswordVerificationResult.Failed)
-                    {
-                return BadRequest("Wrong password");
-            }
-
-            string token = CreateToken(user);
             return Ok(token);
         }
 
-        private string  CreateToken(Customer user)
-        {
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.Name, user.Email )
-            };
+        //private string  CreateToken(Customer user)
+        //{
+        //    var claims = new List<Claim>
+        //    {
+        //        new Claim(ClaimTypes.Name, user.Email )
+        //    };
 
-            var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(configuration.GetValue<string>("AppSettings:Token")!));
+        //    var key = new SymmetricSecurityKey(
+        //        Encoding.UTF8.GetBytes(configuration.GetValue<string>("AppSettings:Token")!));
 
-            var creds = new SigningCredentials(key,SecurityAlgorithms.HmacSha512);
+        //    var creds = new SigningCredentials(key,SecurityAlgorithms.HmacSha512);
 
-            var tokenDescriptor = new JwtSecurityToken(
-                issuer: configuration.GetValue<string>("Application:Issuer"),
-                audience: configuration.GetValue<string>("Application:audience"),
-                claims: claims,
-                expires: DateTime.UtcNow.AddDays(1),
-                signingCredentials: creds
-                );
+        //    var tokenDescriptor = new JwtSecurityToken(
+        //        issuer: configuration.GetValue<string>("Application:Issuer"),
+        //        audience: configuration.GetValue<string>("Application:audience"),
+        //        claims: claims,
+        //        expires: DateTime.UtcNow.AddDays(1),
+        //        signingCredentials: creds
+        //        );
 
-            return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
-        }
+        //    return new JwtSecurityTokenHandler().WriteToken(tokenDescriptor);
+        //}
     }
 }

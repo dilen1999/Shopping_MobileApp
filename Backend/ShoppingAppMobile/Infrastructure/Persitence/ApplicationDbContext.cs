@@ -33,7 +33,7 @@ namespace ShoppingAppMobile.Infrastructure.Persitence
                             entity.Property(p => p.IsDeleted)
                                   .HasDefaultValue(false);
                         });
-            modelBuilder.Entity<Customer>(entity =>{entity.ToTable("Customer");});
+            modelBuilder.Entity<Customer>(entity =>{entity.ToTable("Customer"); entity.HasIndex(c => c.Email).IsUnique(); });
             modelBuilder.Entity<Review>(entity =>{entity.ToTable("Review");});
             modelBuilder.Entity<Cart>(entity => { entity.ToTable("Cart"); });
             modelBuilder.Entity<Order>(entity => { entity.ToTable("Order"); });
