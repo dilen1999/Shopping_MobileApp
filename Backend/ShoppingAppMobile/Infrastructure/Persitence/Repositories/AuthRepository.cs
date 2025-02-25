@@ -74,7 +74,6 @@ namespace ShoppingAppMobile.Infrastructure.Persitence.Repositories
         {
             try
             {
-                // Add logg function 
                 _logger.LogInformation($"Checking if email {request.Email} already exists.");
 
                 // Check if the email already exists
