@@ -32,7 +32,5 @@ namespace ShoppingAppMobile.Core.Domain.Entities
         [DefaultValue(false)] 
         public bool IsDeleted { get; set; } = false; 
 
-        public virtual Product Product { get; set; }
-        public virtual Customer Customer { get; set; }
     }
 }

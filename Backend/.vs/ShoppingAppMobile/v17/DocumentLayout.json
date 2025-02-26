@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\presentation\\controller\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\presentation\\controller\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\presentation\\controller\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\presentation\\controller\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\infrastructure\\persitence\\repositories\\reviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\infrastructure\\persitence\\repositories\\reviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\core\\application\\interfaces\\ireviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\core\\application\\interfaces\\ireviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\core\\application\\services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\core\\application\\services\\reviewservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\core\\domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\core\\domain\\entities\\review.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\presentation\\controller\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\presentation\\controller\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\infrastructure\\persitence\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\infrastructure\\persitence\\repositories\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\infrastructure\\persitence\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\infrastructure\\persitence\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\core\\application\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\presentation\\controller\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\presentation\\controller\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\presentation\\controller\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\presentation\\controller\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -73,10 +101,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\shoppingappmobile.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\shoppingappmobile.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|d:\\faite pvt\\projects\\new folder\\shoppingapppersonal\\backend\\shoppingappmobile\\presentation\\controller\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E5765B5-2E12-4823-82AF-090D5AAD3A5F}|ShoppingAppMobile\\ShoppingAppMobile.csproj|solutionrelative:shoppingappmobile\\presentation\\controller\\reviewcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 195,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,68 +118,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IAuthRepository.cs",
-              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Interfaces\\IAuthRepository.cs",
-              "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Interfaces\\IAuthRepository.cs",
-              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Interfaces\\IAuthRepository.cs",
-              "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Interfaces\\IAuthRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\CustomerRepository.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\CustomerRepository.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\CustomerRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T04:17:36.291Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "ShoppingAppMobile\\Infrastructure\\Persitence\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\ApplicationDbContext.cs",
-              "RelativeToolTip": "ShoppingAppMobile\\Infrastructure\\Persitence\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T02:55:52.895Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthRepository.cs",
-              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\AuthRepository.cs",
-              "RelativeDocumentMoniker": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\AuthRepository.cs",
-              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\AuthRepository.cs",
-              "RelativeToolTip": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\AuthRepository.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAmwEcAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T04:18:02.194Z",
+              "WhenOpened": "2025-02-26T14:59:48.883Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Services\\AuthService.cs",
-              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\AuthService.cs",
-              "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Services\\AuthService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAFAAAA",
+              "DocumentIndex": 2,
+              "Title": "ReviewRepository.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\ReviewRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\ReviewRepository.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\ReviewRepository.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\ReviewRepository.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAYwC0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T04:16:44.238Z"
+              "WhenOpened": "2025-02-26T14:52:49.751Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
-              "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
-              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
-              "RelativeToolTip": "ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAmwDUAAABgAAAA",
+              "DocumentIndex": 5,
+              "Title": "Review.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Domain\\Entities\\Review.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Domain\\Entities\\Review.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Domain\\Entities\\Review.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Core\\Domain\\Entities\\Review.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T05:15:43.549Z"
+              "WhenOpened": "2025-02-26T09:14:22.935Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Customer.cs",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Domain\\Entities\\Customer.cs",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Domain\\Entities\\Customer.cs",
@@ -167,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "UserDTO.cs",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Dtos\\UserDTO.cs",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Dtos\\UserDTO.cs",
@@ -179,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Program.cs",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Program.cs",
@@ -191,7 +193,121 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReviewController.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\ReviewController.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\ReviewController.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\ReviewController.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Presentation\\Controller\\ReviewController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T13:25:55.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\CustomerController.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\CustomerController.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\CustomerController.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Presentation\\Controller\\CustomerController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T05:05:13.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IReviewRepository.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Interfaces\\IReviewRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Interfaces\\IReviewRepository.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Interfaces\\IReviewRepository.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Interfaces\\IReviewRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T14:52:34.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReviewService.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\ReviewService.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Services\\ReviewService.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\ReviewService.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Services\\ReviewService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAwBgAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T14:52:23.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\ProductController.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\ProductController.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\ProductController.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Presentation\\Controller\\ProductController.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAkwCoAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T09:09:35.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAmwDUAAABgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T05:15:43.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Services\\AuthService.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\AuthService.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Services\\AuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T04:16:44.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Infrastructure\\Persitence\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Infrastructure\\Persitence\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T02:55:52.895Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "AuthRepository.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\AuthRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\AuthRepository.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\AuthRepository.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\AuthRepository.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAqwFUAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T04:18:02.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Services\\CustomerService.cs",
@@ -203,19 +319,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CustomerController.cs",
-              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\CustomerController.cs",
-              "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\CustomerController.cs",
-              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\CustomerController.cs",
-              "RelativeToolTip": "ShoppingAppMobile\\Presentation\\Controller\\CustomerController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAAAAAA",
+              "DocumentIndex": 13,
+              "Title": "IAuthRepository.cs",
+              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Interfaces\\IAuthRepository.cs",
+              "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Interfaces\\IAuthRepository.cs",
+              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Interfaces\\IAuthRepository.cs",
+              "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Interfaces\\IAuthRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T05:05:13.552Z"
+              "WhenOpened": "2025-02-23T04:17:36.291Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "CartController.cs",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\CartController.cs",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\CartController.cs",
@@ -227,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "CartService.cs",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Core\\Application\\Services\\CartService.cs",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Core\\Application\\Services\\CartService.cs",
@@ -239,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "OrderRepository.cs",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\OrderRepository.cs",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\OrderRepository.cs",
@@ -251,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "20250223041145_addauth.cs",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Migrations\\20250223041145_addauth.cs",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Migrations\\20250223041145_addauth.cs",
@@ -263,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "WeatherForecast.cs",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\WeatherForecast.cs",
@@ -275,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\appsettings.json",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\appsettings.json",
@@ -287,19 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ReviewController.cs",
-              "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\ReviewController.cs",
-              "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\ReviewController.cs",
-              "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\ReviewController.cs",
-              "RelativeToolTip": "ShoppingAppMobile\\Presentation\\Controller\\ReviewController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T13:25:55.279Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "launchSettings.json",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Properties\\launchSettings.json",
@@ -311,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "ShoppingAppMobile.http",
               "DocumentMoniker": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.http",
               "RelativeDocumentMoniker": "ShoppingAppMobile\\ShoppingAppMobile.http",
