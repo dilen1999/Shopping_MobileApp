@@ -14,6 +14,7 @@ namespace ShoppingAppMobile.Infrastructure.Persitence
         public DbSet<Cart> Carts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -38,6 +39,7 @@ namespace ShoppingAppMobile.Infrastructure.Persitence
             modelBuilder.Entity<Cart>(entity => { entity.ToTable("Cart"); });
             modelBuilder.Entity<Order>(entity => { entity.ToTable("Order"); });
             modelBuilder.Entity<Payment>(entity => { entity.ToTable("Payment"); });
+            modelBuilder.Entity<Notification>(entity => { entity.ToTable("Notification"); });
         }
     }
 }

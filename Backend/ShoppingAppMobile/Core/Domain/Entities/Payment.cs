@@ -11,6 +11,10 @@ namespace ShoppingAppMobile.Core.Domain.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] 
         public int PaymentId { get; set; }
 
+        [Required]
+        [ForeignKey("Customer")] // ForeignKey to the Customer entity
+        public int CustomerId { get; set; }
+
         [MaxLength(50)] 
         public string? CardType { get; set; }
 
@@ -27,6 +31,7 @@ namespace ShoppingAppMobile.Core.Domain.Entities
         public DateTime ExpiryDate { get; set; }
 
         [DefaultValue(false)] 
-        public bool IsDeleted { get; set; } = false; 
+        public bool IsDeleted { get; set; } = false;
+        public virtual Customer Customer { get; set; }
     }
 }
