@@ -12,6 +12,15 @@ namespace ShoppingAppMobile.Core.Application.Services
             _authRepository = authRepository;
         }
 
+        //public async Task<Customer> RegisterAsync(UserDTO request)
+        //{
+        //    return await _authRepository.RegisterAsync(request);
+        //}
+
+        //public async Task<string> LoginAsync(UserDTO request)
+        //{
+        //    return await _authRepository.LoginAsync(request);
+        //}
         public async Task<Customer> RegisterAsync(UserDTO request)
         {
             return await _authRepository.RegisterAsync(request);

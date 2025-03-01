@@ -20,17 +20,28 @@ namespace ShoppingAppMobile.Presentation.Controller
         {
             _authService = authService;
         }
-        //public static Customer user = new();
-        [HttpPost("register")]
-        public async Task<ActionResult<Customer>> Register(UserDTO request)
-        {
-           var user = await _authService.RegisterAsync(request);
-            if (user == null)
-            {
-                return BadRequest("Email already exists");
-            }
-            return Ok(user);
-        }
+        ////public static Customer user = new();
+        //[HttpPost("register")]
+        //public async Task<ActionResult<Customer>> Register(UserDTO request)
+        //{
+        //   var user = await _authService.RegisterAsync(request);
+        //    if (user == null)
+        //    {
+        //        return BadRequest("Email already exists");
+        //    }
+        //    return Ok(user);
+        //}
+
+        //[HttpPost("login")]
+        //public async Task<ActionResult<string>> Login(UserDTO request)
+        //{
+        //    var token = await _authService.LoginAsync(request);
+        //    if (token == null)
+        //    {
+        //        return BadRequest("Invalid email or password");
+        //    }
+        //    return Ok(token);
+        //}
 
         [HttpPost("login")]
         public async Task<ActionResult<string>> Login(UserDTO request)
@@ -41,6 +52,17 @@ namespace ShoppingAppMobile.Presentation.Controller
                 return BadRequest("Invalid email or password");
             }
             return Ok(token);
+        }
+
+        [HttpPost("register")]
+        public async Task<ActionResult<Customer>> Register(UserDTO request)
+        {
+            var user = await _authService.RegisterAsync(request);
+            if (user == null)
+            {
+                return BadRequest("Email already exists");
+            }
+            return Ok(user);
         }
 
         //private string  CreateToken(Customer user)
