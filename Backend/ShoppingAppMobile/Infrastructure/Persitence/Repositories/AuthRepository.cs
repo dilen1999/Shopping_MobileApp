@@ -110,6 +110,8 @@ namespace ShoppingAppMobile.Infrastructure.Persitence.Repositories
         //        return null;
         //    }
         //}
+
+        // Add login function 
         public async Task<string?> LoginAsync(UserDTO request)
         {
             var user = await _context.Customers.FirstOrDefaultAsync(u => u.Email == request.Email);
