@@ -178,8 +178,7 @@
               "RelativeToolTip": "ShoppingAppMobile\\Program.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAAAmwB0AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T16:46:35.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-07T16:46:35.458Z"
             },
             {
               "$type": "Document",
@@ -191,8 +190,7 @@
               "RelativeToolTip": "ShoppingAppMobile\\Infrastructure\\Persitence\\Repositories\\AuthRepository.cs",
               "ViewState": "AQIAALQAAAAAAAAAAADwv70AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T04:18:02.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-23T04:18:02.194Z"
             },
             {
               "$type": "Document",
@@ -202,7 +200,7 @@
               "RelativeDocumentMoniker": "ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
               "ToolTip": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
               "RelativeToolTip": "ShoppingAppMobile\\Presentation\\Controller\\AuthController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-22T05:15:43.549Z",
               "EditorCaption": ""
@@ -217,8 +215,7 @@
               "RelativeToolTip": "ShoppingAppMobile\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-22T05:35:14.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T05:35:14.381Z"
             },
             {
               "$type": "Document",
@@ -230,8 +227,7 @@
               "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Interfaces\\IAuthRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T04:17:36.291Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-23T04:17:36.291Z"
             },
             {
               "$type": "Document",
@@ -243,8 +239,7 @@
               "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Services\\AuthService.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAA6wBcAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T04:16:44.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-23T04:16:44.238Z"
             },
             {
               "$type": "Document",
@@ -268,8 +263,7 @@
               "RelativeToolTip": "ShoppingAppMobile\\Core\\Domain\\Entities\\Customer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T05:18:14.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T05:18:14.973Z"
             },
             {
               "$type": "Document",
@@ -281,8 +275,7 @@
               "RelativeToolTip": "ShoppingAppMobile\\Core\\Application\\Dtos\\UserDTO.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-22T05:18:01.025Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-22T05:18:01.025Z"
             },
             {
               "$type": "Document",
