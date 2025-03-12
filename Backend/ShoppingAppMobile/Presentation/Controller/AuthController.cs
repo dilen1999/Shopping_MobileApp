@@ -15,7 +15,6 @@ namespace ShoppingAppMobile.Presentation.Controller
     [ApiController]
     public class AuthController : ControllerBase
     {
-        //Add authservice injection
         private readonly AuthService _authService;
         public AuthController(AuthService authService)
         {
