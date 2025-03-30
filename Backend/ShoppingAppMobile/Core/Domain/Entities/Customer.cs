@@ -12,18 +12,23 @@ namespace
         public int CustomerId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public string Password { get; set; }
+        //public string Password { get; set; }
 
-        //public string _password;
-        //public string Password 
-        //{
-        //    get => _password;
-        //    set => _password =BCrypt.Net.BCrypt.HashPassword(value);
-        //}
+        public string _password;
+        public string Password
+        {
+            get => _password;
+            set => _password = BCrypt.Net.BCrypt.HashPassword(value);
+        }
         public string ProfilePicture { get; set; }
         public string Role { get; set; }
         public int? PaymentId { get; set; }
         public int? AddressId { get; set; }
         public bool IsDeleted { get; set; } = false;
+
+        public bool VerifyPassword(string password)
+        {
+            return BCrypt.Net.BCrypt.Verify(password, _password);
+        }
     }
 }

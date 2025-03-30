@@ -5268,11 +5268,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj",
+      "projectUniqueName": "D:\\Git Personal\\Shpping app\\Shopping_MobileApp\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj",
       "projectName": "ShoppingAppMobile",
-      "projectPath": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj",
+      "projectPath": "D:\\Git Personal\\Shpping app\\Shopping_MobileApp\\Backend\\ShoppingAppMobile\\ShoppingAppMobile.csproj",
       "packagesPath": "C:\\Users\\dilen\\.nuget\\packages\\",
-      "outputPath": "D:\\FaiTe PVT\\Projects\\New folder\\ShoppingAppPersonal\\Backend\\ShoppingAppMobile\\obj\\",
+      "outputPath": "D:\\Git Personal\\Shpping app\\Shopping_MobileApp\\Backend\\ShoppingAppMobile\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dilen\\AppData\\Roaming\\NuGet\\NuGet.Config",
