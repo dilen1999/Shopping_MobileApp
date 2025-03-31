@@ -1,5 +1,31 @@
 # Shopping Mobile App in React Native
 
+📌 Overview
+
+This is a Shopping Mobile App built using React Native for the frontend and .NET for the backend. The database used is SQL Server Management Studio (SSMS).
+
+🚀 How to Use
+
+Clone the repository:
+
+git clone https://github.com/your-repo/shopping-app.git
+cd shopping-app
+
+Install dependencies:
+
+npm install
+
+Run the application:
+
+npm run start
+
+📝 Notes
+
+The frontend is built with React Native (Expo).
+
+The backend is developed using .NET.
+
+The database used is SQL Server Management Studio (SSMS).
 <p>
   <!-- iOS -->
   <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
@@ -8,18 +34,8 @@
   <!-- Web -->
 </p>
 
-## 🚀 How to use
-
-> `npx create-expo my-app --example with-reanimated`
-
-- Run `npm install`
-- Run `npm run start` to try it out.
-
-## 📝 Notes
-
-- [`react-native-reanimated` docs](https://docs.swmansion.com/react-native-reanimated/)
 ## Get Start, Login, and SignUp
-
+   <td align="center"><img src="https://github.com/user-attachments/assets/d5ca0d3d-f4bc-4fce-880c-7e63eb8b8829"/></td>
 <table>
   <tr>
     <th>Get Start</th>
@@ -27,6 +43,7 @@
     <th>SignUp</th>
     <th>Home</th>
   </tr>
+
   <tr>
     <td align="center"><img src="https://github.com/user-attachments/assets/3600baca-a302-4906-b3b7-e00affc243cc"/></td>
     <td align="center"><img src="https://github.com/user-attachments/assets/a973cf22-6adf-49b1-a623-92b0db929157" /></td>
