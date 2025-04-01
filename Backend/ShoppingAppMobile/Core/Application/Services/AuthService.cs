@@ -15,6 +15,7 @@ namespace ShoppingAppMobile.Core.Application.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
+        // Register service
         public async Task<Customer> RegisterAsync(string name, string email, string password)
         {
             var existingCustomer = (await _customerRepository.GetCustomersAsync())
@@ -37,6 +38,7 @@ namespace ShoppingAppMobile.Core.Application.Services
             return newCustomer;
         }
 
+        // Login service
         public async Task<Customer> LoginAsync(string email, string password)
         {
             var customer = (await _customerRepository.GetCustomersAsync())
